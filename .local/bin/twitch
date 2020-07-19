@@ -1,0 +1,10 @@
+#!/bin/bash
+
+QUALITY=${2:-best}
+
+streamlink twitch.tv/$1 $QUALITY \
+    --twitch-check-vods          \
+    --twitch-disable-ads         \
+    --twitch-low-latency         \
+    --twitch-disable-hosting     \
+    --player-passthrough=hls
