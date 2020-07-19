@@ -141,3 +141,5 @@ if [[ -x "/bin/imv" ]] then
 fi
 
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias diff="kitty +kitten diff"
+alias router="firefox --new-tab $(ip r | awk 'NR==1{print $3}')"
