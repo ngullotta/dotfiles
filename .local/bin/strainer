@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if ! [[ -x /bin/exiftool ]]
+if ! [[ -x /bin/exiftool ]]; then
+  echo "Please install exiftool"
+  exit 1
+fi
 
 EXT=${1:-jpg}
 
