@@ -114,6 +114,10 @@ function git_current_branch() {
   echo -n "${ref#refs/heads/} "
 }
 
+function which-tag() {
+  git tag --contains "$1" 2>&1 | head -n 1
+}
+
 PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch)%F{blue}%B%~%b%f %# '
 
 # Plugins
