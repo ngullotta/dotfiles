@@ -120,18 +120,22 @@ function which-tag() {
 
 PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch)%F{blue}%B%~%b%f %# '
 
+PATH="$PATH:$HOME/.local/bin"
+
+SOURCECODE_AND_PROJECTS_DIR="$HOME/Projects"
+
 # Plugins
-if [[ -d "$HOME/src/zsh-z/" ]] then
-  source $HOME/src/zsh-z/zsh-z.plugin.zsh
+if [[ -d "$SOURCECODE_AND_PROJECTS_DIR/zsh-z/" ]] then
+  source $SOURCECODE_AND_PROJECTS_DIR/zsh-z/zsh-z.plugin.zsh
 fi
 
 # Stupid dev stuff
 if [[ $(basename $PWD) == "ardour" ]] then
-  export TOP="$HOME/src/ardour"
+  export TOP="$SOURCECODE_AND_PROJECTS_DIR/ardour"
 fi
 
 if [[ $(basename $PWD) == "mixbus" ]] then
-  export TOP="$HOME/src/mixbus"
+  export TOP="$SOURCECODE_AND_PROJECTS_DIR/mixbus"
 fi
 
 # Export ardour build libs etc.
