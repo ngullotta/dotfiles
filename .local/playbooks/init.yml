@@ -5,16 +5,22 @@
   become_method: sudo
 
   tasks:
-    - name: Install Common Packages
-
+    - name: install fira-code
       package:
         name: fira-code-fonts
         state: present
-      
+
+    - name: install kitty terminal
       package:
         name: kitty
         state: present
 
+    - name: uninstall snapd
       package:
         name: snapd
         state: absent
+
+    - name: install vlc
+      package:
+        name: vlc
+        state: present
