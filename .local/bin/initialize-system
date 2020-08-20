@@ -5,12 +5,12 @@ if ! [[ -x /usr/bin/git ]]; then
   exit 1
 fi
 
-if ! [[ -x /bin/ansible || -x /bin/ansible-playbook ]]; then
+if ! [[ -x /usr/bin/ansible || -x /usr/bin/ansible-playbook ]]; then
   echo "Please install ansible!"
   exit 1
 fi
 
-if ! [[ -d  "$HOME/.cfg" ]] then
+if ! [[ -d  "$HOME/.cfg" ]]; then
     echo "Pulling down dotfiles..."
     mkdir -p "$HOME/.cfg"
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
