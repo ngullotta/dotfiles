@@ -5,6 +5,11 @@
   become_method: sudo
 
   tasks:
+    -name: install zsh
+      package:
+        name: zsh
+        state: present
+
     - name: install fira-code
       package:
         name: fira-code-fonts
