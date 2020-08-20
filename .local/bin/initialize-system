@@ -1,8 +1,20 @@
 #!/bin/sh
 
+if ! [[ -x /bin/git ]]; then
+  echo "Please install git!"
+  exit 1
+fi
+
 if ! [[ -x /bin/ansible || -x /bin/ansible-playbook ]]; then
   echo "Please install ansible!"
   exit 1
+fi
+
+if ! [[ -d  "$HOME/.cfg" ]] then
+    echo "Pulling down dotfiles..."
+    mkdir -p "$HOME/.cfg"
+    git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
+    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" checkout
 fi
 
 while test $# -gt 0; do
