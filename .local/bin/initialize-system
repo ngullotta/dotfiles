@@ -5,7 +5,7 @@ if ! [ -x /usr/bin/git ]; then
   exit 1
 fi
 
-if [ -x /usr/bin/ansible ] && [ -x /usr/bin/ansible-playbook ]; then
+if ! [ -x /usr/bin/ansible ] || [ -x /usr/bin/ansible-playbook ]; then
   echo "Please install ansible!"
   exit 1
 fi
