@@ -1,0 +1,39 @@
+#!/bin/sh
+
+if ! [[ -x /bin/ansible || -x /bin/ansible-playbook ]]; then
+  echo "Please install ansible!"
+  exit 1
+fi
+
+while test $# -gt 0; do
+    case "$1" in
+        -h|--help)
+            echo "Options:"
+            echo "-h, --help  Show this message."
+            echo "-d, --dry   Check playbook."
+            echo "-f, --file  Specify playbook"
+            exit 0
+            ;;
+        -d|--dry)
+            shift
+            DRY=1
+            ;;
+        -f|--file)
+            shift
+            FILE=$1
+            shift
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+
+FILE=${FILE:-$HOME/.local/playbooks/init.yml}
+ARGS="$FILE"
+
+if [[ $DRY -eq 1 ]]; then
+    ARGS="$ARGS -C"
+fi
+
+ansible-playbook $ARGS --ask-become-pass "$@"
