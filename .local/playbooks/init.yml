@@ -1,0 +1,16 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: Install Common Packages
+
+      package:
+        name: fira-code-fonts
+        state: present
+      
+      package:
+        name: kitty
+        state: present
