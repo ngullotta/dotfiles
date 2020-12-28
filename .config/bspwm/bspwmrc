@@ -1,5 +1,6 @@
 #! /bin/sh
 
+~/.fehbg &
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep bspswallow || bspswallow &
 $HOME/.config/polybar/launch
