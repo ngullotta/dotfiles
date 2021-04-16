@@ -1,0 +1,51 @@
+#!/bin/sh
+
+if ! [ -x /usr/bin/git ]; then
+  echo "Please install git!"
+  exit 1
+fi
+
+if ! [ -x /usr/bin/ansible ] || ! [ -x /usr/bin/ansible-playbook ]; then
+  echo "Please install ansible!"
+  exit 1
+fi
+
+if ! [ -d  "$HOME/.cfg" ]; then
+    echo "Pulling down dotfiles..."
+    mkdir -p "$HOME/.cfg"
+    git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
+    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" checkout master
+fi
+
+while test $# -gt 0; do
+    case "$1" in
+        -h|--help)
+            echo "Options:"
+            echo "-h, --help  Show this message."
+            echo "-d, --dry   Check playbook."
+            echo "-f, --file  Specify playbook"
+            exit 0
+            ;;
+        -d|--dry)
+            shift
+            DRY=1
+            ;;
+        -f|--file)
+            shift
+            FILE=$1
+            shift
+            ;;
+        *)
+            break
+            ;;
+    esac
+done
+
+FILE=${FILE:-$HOME/.local/playbooks/init.yml}
+ARGS="$FILE"
+
+if [[ $DRY -eq 1 ]]; then
+    ARGS="$ARGS -C"
+fi
+
+ansible-playbook $ARGS --ask-become-pass "$@"

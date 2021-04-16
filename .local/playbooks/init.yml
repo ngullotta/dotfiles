@@ -1,0 +1,32 @@
+---
+- hosts: localhost
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  tasks:
+    - name: install zsh
+      package:
+        name: zsh
+        state: present
+
+    - name: install fira-code
+      package:
+        name: fira-code-fonts
+        state: present
+
+    - name: install kitty terminal
+      package:
+        name: kitty
+        state: present
+
+    - name: uninstall snapd
+      package:
+        name: snapd
+        state: absent
+
+    - name: install vlc
+      package:
+        name: vlc
+        state: present
+

@@ -114,8 +114,24 @@ function git_current_branch() {
   echo -n "${ref#refs/heads/} "
 }
 
-function which-tag() {
-  git tag --contains "$1" 2>&1 | head -n 1
+function git-tag-contains() {
+    [ $# -gt 0 ] || return 1
+    git tag --contains "$1" 2>&1 | head -n 1
+}
+
+function rotate() {
+    which convert > "/dev/null" 2>&1 || return 1
+    local files=()
+    local const=
+    for obj in "$@"; do
+        [ -f "$obj" ] && file "$obj" | grep -qE 'image|bitmap' && identify "$obj" > "/dev/null" 2>&1 && files+=("$obj")
+        [[ "$obj" =~ "^[+-]?[0-9]+([.][0-9]+)?$" ]] && [ -z "$const" ] && const="$obj"
+    done
+
+    for file in $files; do
+        convert "$file" -rotate "${const:-90}" "$file"
+        echo "Rotated $(basename $file) by ${const:-90}°"
+    done
 }
 
 PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch)%F{blue}%B%~%b%f %# '
