@@ -1,10 +1,37 @@
-#!/bin/bash
+#!/bin/sh
 
-QUALITY=${2:-best}
+__usage() {
+    echo "Usage: twitch username [quality] [--additional-flags]"
+    exit "${1:-0}"
+}
 
-streamlink twitch.tv/$1 $QUALITY \
-    --twitch-check-vods          \
-    --twitch-disable-ads         \
-    --twitch-low-latency         \
-    --twitch-disable-hosting     \
-    --player-passthrough=hls
+[ "$#" -gt 0 ] || >&2 __usage 1
+while getopts ":h" option; do
+    case $option in
+        h)
+            __usage
+            ;;
+        *) ;;
+    esac
+done
+
+
+if ! which rewind > /dev/null; then
+    echo "Please install rewind package in order to use this utility"
+    exit 1
+fi
+
+username="$1"
+quality="${2:-best}"
+
+shift 1
+[ -n "$2" ] && shift 1
+
+rewind twitch.tv/"$username" "$quality" \
+    --twitch-check-vods      \
+    --twitch-disable-ads     \
+    --twitch-low-latency     \
+    --twitch-disable-hosting \
+    --twitch-disable-reruns  \
+    --player-passthrough=hls \
+    "$@"
