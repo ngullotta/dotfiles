@@ -1,16 +1,21 @@
-# Enable colors
+# Enable colors and setup prompt
 autoload -Uz colors && colors
 setopt prompt_subst
+
 git_current_branch() {
   ref=$(command git symbolic-ref --quiet HEAD 2> /dev/null)
-  [ $? = 128 ] && return 1
-  if ! [ $? = 0 ]; then
-    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 1
+  rv=$?
+  if ! [ $rv = 0 ]; then
+    if [ $rv = 128 ]; then
+      return
+    fi
+    ref=$(command git rev-parse --short HEAD 2> /dev/null)
   fi
-  echo -n "${ref#refs/heads/}"
+  echo -n "${ref#refs/heads/} "
 }
+
 # @ToDo -> Make this prettier!
-PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch) %F{blue}%B%~%b%f %# '
+PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch)%F{blue}%B%~%b%f %# '
 
 # History
 HISTSIZE=10000
@@ -79,7 +84,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
   add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
 fi
 
-
 # -----------------------------------------------------------------------------
 PATH="$PATH:$HOME/.local/bin"
 
@@ -94,54 +98,48 @@ for plugin in "$plugins"/*; do
   fi
 done
 
+# Useful functions and aliases
 reload() {
   [ -f "$HOME/.zshrc" ] && source "$HOME/.zshrc" && clear
 }
 
 extract() {
-  if [ -z "$1" ]; then
-      __usage="
-      Usage:
-      extract <$(pwd)/file_name>.<zip|rar|bz2|gz|tar|tbz2|tgz|Z|7z|xz|ex|tar.bz2|tar.gz|tar.xz>
-      extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]
-      "
-      2&> echo "$__usage"
-      return 1
-  else
-    for n in "$@"; do
-      if ! [ -f "$n" ]; then
-        2&> echo "'$n' - file does not exist" && return 1
-      fi
+  for n in "$@"; do
+    if ! [ -f "$n" ]; then
+      2&> echo "'$n' - file does not exist" && return 1
+    fi
 
-      case "${n%,}" in
-        *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
-                     tar xvf "$n"       ;;
-        *.lzma)      unlzma ./"$n"      ;;
-        *.bz2)       bunzip2 ./"$n"     ;;
-        *.cbr|*.rar) unrar x -ad ./"$n" ;;
-        *.gz)        gunzip ./"$n"      ;;
-        *.cbz|*.epub|*.zip)
-                     unzip ./"$n"       ;;
-        *.z)         uncompress ./"$n"  ;;
-        *.7z|*.apk|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg)
-                     7z x ./"$n"        ;;
-        *.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
-                     7z x ./"$n"        ;;
-        *.xz)        unxz ./"$n"        ;;
-        *.exe)       cabextract ./"$n"  ;;
-        *.cpio)      cpio -id < ./"$n"  ;;
-        *.cba|*.ace) unace x ./"$n"     ;;
-        *.zpaq)      zpaq x ./"$n"      ;;
-        *.arc)       arc e ./"$n"       ;;
-        *.cso)
-                     ciso 0 ./"$n" ./"$n.iso" && extract "$n".iso && \rm -f $n;;
-        *)
-          echo "extract: '$n' - unknown archive method"
-          return 1
-          ;;
-      esac
-    done
-  fi
+    case "${n%,}" in
+      *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+        tar xvf "$n"
+        ;;
+      *.lzma)
+        unlzma ./"$n"
+        ;;
+      *.bz2)
+        bunzip2 ./"$n"
+        ;;
+      *.cbr|*.rar)
+        unrar x -ad ./"$n"
+        ;;
+      *.gz)
+        gunzip ./"$n"
+        ;;
+      *.cbz|*.epub|*.zip)
+        unzip ./"$n"
+        ;;
+      *.z)
+        uncompress ./"$n"
+        ;;
+      *.7z|*.apk|*.deb|*.dmg|*.iso|*.pkg|*.rpm)
+        7z x ./"$n"
+        ;;
+      *)
+        echo "Unknown archive method for '$n'"
+        return 1
+        ;;
+    esac
+  done
 }
 
 git_tag_contains() {
@@ -149,7 +147,7 @@ git_tag_contains() {
   git tag --contains "$1" 2>&1 | head -n 1
 }
 
-function rotate() {
+rotate() {
   which convert > "/dev/null" 2>&1 || return 1
   files=()
   const=
@@ -158,7 +156,7 @@ function rotate() {
       | grep -qE 'image|bitmap' \
       && identify "$obj" > "/dev/null" 2>&1 \
       && files+=("$obj")
-    
+
     [[ "$obj" =~ "^[+-]?[0-9]+([.][0-9]+)?$" ]] \
       && [ -z "$const" ] && const="$obj"
   done
@@ -168,6 +166,39 @@ function rotate() {
     convert "$file" -rotate "$deg" "$file"
     echo "Rotated $(basename $file) by $deg°"
   done
+}
+
+print_centered() {
+  [[ $# == 0 ]] && return 1
+
+  declare -i TERM_COLS
+
+  # tput on MacOS does not respect -T for some reason, so this is an
+  # equivalent trick. Why is this even necessary???
+  [ "$TERM" = "dumb" ] && export TERM="ansi"
+  if [ -n "$TERM" ] && ! [ "$TERM" = "dumb" ]; then
+    TERM_COLS="$(tput cols)"
+  else
+    TERM_COLS="$(tput cols -T ansi)"
+  fi
+
+  [ -z "$TERM_COLS" ] && TERM_COLS="80"
+  declare -i str_len="${#1}"
+  [[ $str_len -ge $TERM_COLS ]] && {
+    echo "$1";
+    return 0;
+  }
+
+  declare -i filler_len="$(( (TERM_COLS - str_len) / 2 ))"
+  [[ $# -ge 2 ]] && ch="${2:0:1}" || ch=" "
+  filler=""
+  for (( i = 0; i < filler_len; i++ )); do
+    filler="${filler}${ch}"
+  done
+
+  printf "%s%s%s" "$filler" "$1" "$filler"
+  [[ $(( (TERM_COLS - str_len) % 2 )) -ne 0 ]] && printf "%s" "${ch}"
+  printf "\n"
 }
 
 # Aliases
