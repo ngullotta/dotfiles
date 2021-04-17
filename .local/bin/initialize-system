@@ -15,6 +15,7 @@ if ! [ -d  "$HOME/.cfg" ]; then
     mkdir -p "$HOME/.cfg"
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
     git --git-dir="$HOME/.cfg/" --work-tree="$HOME" checkout master
+    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" submodule init
 fi
 
 while test $# -gt 0; do
