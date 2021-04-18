@@ -14,8 +14,10 @@ if ! [ -d  "$HOME/.cfg" ]; then
     echo "Pulling down dotfiles..."
     mkdir -p "$HOME/.cfg"
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
-    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" checkout master
-    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" submodule init
+    alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+    config checkout master \
+        && config submodule init --recursive \
+        && config submodule update
 fi
 
 while test $# -gt 0; do
@@ -24,17 +26,11 @@ while test $# -gt 0; do
             echo "Options:"
             echo "-h, --help  Show this message."
             echo "-d, --dry   Check playbook."
-            echo "-f, --file  Specify playbook"
             exit 0
             ;;
         -d|--dry)
             shift
-            DRY=1
-            ;;
-        -f|--file)
-            shift
-            FILE=$1
-            shift
+            dry=1
             ;;
         *)
             break
@@ -42,11 +38,11 @@ while test $# -gt 0; do
     esac
 done
 
-FILE=${FILE:-$HOME/.local/playbooks/init.yml}
-ARGS="$FILE"
-
-if [[ $DRY -eq 1 ]]; then
-    ARGS="$ARGS -C"
+if [ -d "$HOME/.local/ansible-config" ]; then
+    cd "$HOME/.local/ansible-config"
+    if [ $dry -eq 1 ]; then
+        sudo make dry-run
+        exit
+    fi
+    sudo make dry-run && sudo make run
 fi
-
-ansible-playbook $ARGS --ask-become-pass "$@"
