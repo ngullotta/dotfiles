@@ -1,23 +1,45 @@
 #!/bin/sh
 
-if ! [ -x /usr/bin/git ]; then
+if ! which git > /dev/null 2>&1; then
   echo "Please install git!"
   exit 1
 fi
 
-if ! [ -x /usr/bin/ansible ] || ! [ -x /usr/bin/ansible-playbook ]; then
+if ! which ansible > /dev/null 2>&1 \
+    || ! which ansible-playbook > /dev/null 2>&1; 
+then
   echo "Please install ansible!"
   exit 1
 fi
 
+alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 if ! [ -d  "$HOME/.cfg" ]; then
     echo "Pulling down dotfiles..."
     mkdir -p "$HOME/.cfg"
+    # Non-SSH because we don't have keys set up yet...
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
-    alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+    config config pull.rebase true
     config checkout master \
         && config submodule init --recursive \
         && config submodule update
+fi
+
+if [ -d  "$HOME/.cfg" ]; then
+    config config pull.rebase true
+    # This is essentially the same step as earlier, just here incase 
+    # this is rerun at a later date or things are in a weird state
+    config checkout master \
+        && config pull \
+        && config submodule init --recursive \
+        && config submodule update
+    # Drop these clutter files that we don't need
+    [ -d "$HOME/.github" ] \
+        && config update-index --assume-unchanged "$HOME/.github" \
+        && rm -r "$HOME/.github"
+
+    [ -f "$HOME/README.md" ] \
+        && config update-index --assume-unchanged "$HOME/README.md" \
+        && rm "$HOME/README.md"
 fi
 
 while test $# -gt 0; do
@@ -40,9 +62,11 @@ done
 
 if [ -d "$HOME/.local/ansible-config" ]; then
     cd "$HOME/.local/ansible-config"
-    if [ $dry -eq 1 ]; then
+    if [ "$dry" = "1" ]; then
+        echo "Dry run"
         sudo make dry-run
         exit
     fi
     sudo make dry-run && sudo make run
+    cd
 fi

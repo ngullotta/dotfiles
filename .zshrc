@@ -105,4 +105,3 @@ for script in "$scripts"/*; do
 done
 
 alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-[ -f "$HOME/README.md" ] && rm "$HOME/README.md"
