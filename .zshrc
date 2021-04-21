@@ -26,7 +26,7 @@ HISTFILE="$HOME/.cache/zsh/history"
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+compinit -i
 _comp_options+=(globdots)  # Include hidden files
 
 # Set-up kitty completetion, if available
