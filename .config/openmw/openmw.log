@@ -1,0 +1,305 @@
+Crash handler installed
+Loading config file: /etc/openmw/openmw.cfg
+Loading config file: /home/legion/.config/openmw/openmw.cfg
+OpenMW version 0.46.0
+Using default (English) font encoding.
+OSG version: 3.4.1
+SDL version: 2.0.14
+Loading settings file: /etc/openmw/settings-default.cfg
+Loading settings file: /home/legion/.config/openmw/settings.cfg
+Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Morrowind.bsa
+Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Tribunal.bsa
+Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Bloodmoon.bsa
+Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/TR_Data.bsa
+Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/PT_Data.bsa
+Adding data directory /usr/share/openmw/resources/vfs
+Adding data directory /usr/share/openmw/data
+Adding data directory /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/patch_for_purists
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/expansion_delay
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/facelift
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/npc_additions
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/itextures
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_rebuilt_core
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_data
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_travels
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_cyrodil
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/optimization_core
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/dahrk_core
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/mca
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_skyrim
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/better_regen
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/natural_leveling
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/natural_growth
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/nhm
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/nhm_deluxe
+Adding data directory /home/legion/.local/share/openmw/data
+Loading keybindings file: /home/legion/.config/openmw/input_v3.xml
+DataManager::getData: Failed to open '/usr/share/fonts/dejavu/DejaVuLGCSansMono.ttf'
+DataManager::getData: Failed to open '/usr/share/fonts/dejavu/DejaVuLGCSansMono.ttf'
+Initializing OpenAL...
+Opened "Scarlett Solo USB Analog Stereo"
+  ALC Version: 1.1
+  ALC Extensions: ALC_ENUMERATE_ALL_EXT ALC_ENUMERATION_EXT ALC_EXT_CAPTURE ALC_EXT_DEDICATED ALC_EXT_disconnect ALC_EXT_EFX ALC_EXT_thread_local_context ALC_SOFT_device_clock ALC_SOFT_HRTF ALC_SOFT_loopback ALC_SOFT_output_limiter ALC_SOFT_pause_device
+  Vendor: OpenAL Community
+  Renderer: OpenAL Soft
+  Version: 1.1 ALSOFT 1.19.1
+  Extensions: AL_EXT_ALAW AL_EXT_BFORMAT AL_EXT_DOUBLE AL_EXT_EXPONENT_DISTANCE AL_EXT_FLOAT32 AL_EXT_IMA4 AL_EXT_LINEAR_DISTANCE AL_EXT_MCFORMATS AL_EXT_MULAW AL_EXT_MULAW_BFORMAT AL_EXT_MULAW_MCFORMATS AL_EXT_OFFSET AL_EXT_source_distance_model AL_EXT_SOURCE_RADIUS AL_EXT_STEREO_ANGLES AL_LOKI_quadriphonic AL_SOFT_block_alignment AL_SOFT_deferred_updates AL_SOFT_direct_channels AL_SOFTX_events AL_SOFTX_filter_gain_ex AL_SOFT_gain_clamp_ex AL_SOFT_loop_points AL_SOFTX_map_buffer AL_SOFT_MSADPCM AL_SOFT_source_latency AL_SOFT_source_length AL_SOFT_source_resampler AL_SOFT_source_spatialize
+HRTF disabled
+Allocated 256 sound sources
+Low-pass filter supported
+EAX Reverb supported
+Enumerated output devices:
+  Scarlett Solo USB Analog Stereo  Built-in Audio Digital Stereo (IEC958)  GM204 High Definition Audio Controller Digital Stereo (HDMI)
+Enumerated HRTF names:
+  default-44100  default-48000  Built-In 44100hz  Built-In 48000hz
+Loading content file Morrowind.esm
+Loading content file Tribunal.esm
+Loading content file Bloodmoon.esm
+Loading content file MCA.esm
+Loading content file Tamriel_Data.esm
+Loading content file Cyrodiil_Main.esm
+Loading content file Sky_Main.esm
+Loading content file TR_Mainland.esm
+Loading content file Patch for Purists.esm
+Loading content file Patch for Purists - Book Typos.ESP
+Loading content file Patch for Purists - Semi-Purist Fixes.ESP
+Loading content file Expansion Delay.ESP
+Loading content file Starfires NPC Additions ver-1.13.esp
+Loading content file Sky_Main_Grass.ESP
+Loading content file Cyrodiil_Grass.ESP
+Loading content file TR_Travels.esp
+Loading content file ncgdMW-3.2.omwaddon
+Loading content file NaturalLeveling.esp
+Loading content file BetterRegen.omwaddon
+Loading content file NHM v1.7.0 - Deluxe.ESP
+Loading content file NHM v1.7.0 - DeluxeRebirth.ESP
+Loading content file NHM - Moving Barrel.ESP
+Loading content file NHM v1.7.0 - Ald-Ruhn.esp
+Loading content file NHM v1.7.0 - Balmora.esp
+Loading content file NHM v1.7.0 - Dagon Fel.ESP
+Loading content file NHM v1.7.0 - Ebonheart.ESP
+Loading content file NHM v1.7.0 - Gnisis.ESP
+Loading content file NHM v1.7.0 - Sadrith Mora.ESP
+Loading content file NHM v1.7.0 - Seyda Neen.ESP
+Loading content file NHM v1.7.0 - Suran.ESP
+Loading content file NHM v1.7.0 - Caldera.ESP
+Loading content file NHM v1.7.0 - Tel Branora.ESP
+Loading content file NHM v1.7.0 - Vos.ESP
+NPC 'pc_gc_guard' (<Deprecated>) has nonexistent faction 'T_Cyr_ImperialWatch', ignoring it.
+NPC 'pc_str_quintex doralis' (Quintex Doralis) has nonexistent faction 'T_Cyr_EastEmpireCompany', ignoring it.
+NPC 'pc_str_seneca juro' (Seneca Juro) has nonexistent faction 'T_Cyr_ImperialWatch', ignoring it.
+NPC 'pc_str_tullius juro' (Tullius Juro) has nonexistent faction 'T_Cyr_ImperialWatch', ignoring it.
+NPC 'pc_vvard_titus corilex' (Titus Corilex) has nonexistent faction 'T_Cyr_EastEmpireCompany', ignoring it.
+Playing music/special/morrowind title.mp3
+Changing to interior
+Loading cell Tel Vos, Aryon's Chambers
+Warning: MCA_companions line 57, column 22 ("player"): Extra argument
+Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
+Playing music/explore/mx_explore_4.mp3
+Unloading cell Tel Vos, Aryon's Chambers
+Loading cell 10, 14
+Loading cell 9, 14
+Loading cell 10, 13
+Loading cell 10, 15
+Loading cell 11, 14
+Loading cell 9, 13
+Loading cell 9, 15
+Loading cell 11, 13
+Loading cell 11, 15
+Warning: OutsideBanner line 38, column 6 (endif): endif without matching if/elseif
+Playing music/battle/mw battle1.mp3
+Unloading cell 11, 13
+Unloading cell 11, 14
+Unloading cell 11, 15
+Loading cell 8, 14
+Loading cell 8, 13
+Loading cell 8, 15
+Changing to interior
+Unloading cell 8, 13
+Unloading cell 8, 14
+Unloading cell 8, 15
+Unloading cell 9, 13
+Unloading cell 9, 14
+Unloading cell 9, 15
+Unloading cell 10, 13
+Unloading cell 10, 14
+Unloading cell 10, 15
+Loading cell Tel Vos, Dungeon
+Playing music/explore/morrowind title.mp3
+Playing music/battle/mw battle 4.mp3
+Playing music/explore/mx_explore_3.mp3
+Playing music/battle/mw battle 7.mp3
+Playing music/explore/mx_explore_5.mp3
+Playing music/battle/mw battle2.mp3
+Playing music/explore/mx_explore_1.mp3
+Changing to interior
+Unloading cell Tel Vos, Dungeon
+Loading cell Tel Vos, Jail
+Playing music/battle/mw battle5.mp3
+Playing music/explore/mx_explore_6.mp3
+Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
+Changing to interior
+Unloading cell Tel Vos, Jail
+Loading cell Tel Vos, Dungeon
+Playing music/battle/mw battle 8.mp3
+Playing music/explore/mx_explore_2.mp3
+Unloading cell Tel Vos, Dungeon
+Loading cell 9, 14
+Loading cell 8, 14
+Loading cell 9, 13
+Loading cell 9, 15
+Loading cell 10, 14
+Loading cell 8, 13
+Loading cell 8, 15
+Loading cell 10, 13
+Loading cell 10, 15
+Playing music/battle/mw battle3.mp3
+Changing to interior
+Unloading cell 8, 13
+Unloading cell 8, 14
+Unloading cell 8, 15
+Unloading cell 9, 13
+Unloading cell 9, 14
+Unloading cell 9, 15
+Unloading cell 10, 13
+Unloading cell 10, 14
+Unloading cell 10, 15
+Loading cell Tel Vos, Dungeon
+Playing music/explore/mx_explore_7.mp3
+Changing to interior
+Unloading cell Tel Vos, Dungeon
+Loading cell Tel Vos, Jail
+Playing music/battle/mw battle2.mp3
+Playing music/explore/morrowind title.mp3
+Unloading cell Tel Vos, Jail
+Loading cell 10, 14
+Loading cell 9, 14
+Loading cell 10, 13
+Loading cell 10, 15
+Loading cell 11, 14
+Loading cell 9, 13
+Loading cell 9, 15
+Loading cell 11, 13
+Loading cell 11, 15
+Playing music/battle/mw battle5.mp3
+Playing music/battle/mw battle 4.mp3
+Playing music/battle/mw battle1.mp3
+Playing music/battle/mw battle 8.mp3
+Playing music/explore/mx_explore_4.mp3
+Playing music/explore/mx_explore_1.mp3
+Playing music/explore/mx_explore_3.mp3
+Playing music/explore/mx_explore_1.mp3
+Playing music/battle/mw battle2.mp3
+Playing music/battle/mw battle3.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/explore/mx_explore_3.mp3
+Playing music/explore/mx_explore_4.mp3
+Playing music/battle/mw battle 8.mp3
+Playing music/explore/mx_explore_3.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/explore/morrowind title.mp3
+Playing music/explore/mx_explore_1.mp3
+Playing music/explore/mx_explore_7.mp3
+Playing music/battle/mw battle 8.mp3
+Playing music/battle/mw battle5.mp3
+Playing music/explore/mx_explore_6.mp3
+Playing music/battle/mw battle2.mp3
+Playing music/explore/mx_explore_7.mp3
+Playing music/explore/mx_explore_1.mp3
+Playing music/explore/mx_explore_5.mp3
+Playing music/explore/mx_explore_4.mp3
+Playing music/battle/mw battle 7.mp3
+Playing music/battle/mw battle5.mp3
+Playing music/battle/mw battle3.mp3
+Playing music/battle/mw battle 7.mp3
+Playing music/explore/mx_explore_3.mp3
+Playing music/battle/mw battle1.mp3
+Playing music/explore/morrowind title.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/explore/mx_explore_4.mp3
+Playing music/explore/morrowind title.mp3
+Playing music/battle/mw battle2.mp3
+Playing music/explore/mx_explore_6.mp3
+Playing music/explore/mx_explore_1.mp3
+Playing music/explore/mx_explore_5.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/explore/mx_explore_7.mp3
+Playing music/battle/mw battle 4.mp3
+Playing music/battle/mw battle 8.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/battle/mw battle1.mp3
+Playing music/battle/mw battle2.mp3
+Playing music/explore/morrowind title.mp3
+Playing music/explore/mx_explore_6.mp3
+Playing music/explore/mx_explore_2.mp3
+Playing music/battle/mw battle5.mp3
+Unloading cell 11, 13
+Unloading cell 11, 14
+Unloading cell 11, 15
+Loading cell 8, 14
+Loading cell 8, 13
+Loading cell 8, 15
+Playing music/explore/mx_explore_7.mp3
+Changing to interior
+Unloading cell 8, 13
+Unloading cell 8, 14
+Unloading cell 8, 15
+Unloading cell 9, 13
+Unloading cell 9, 14
+Unloading cell 9, 15
+Unloading cell 10, 13
+Unloading cell 10, 14
+Unloading cell 10, 15
+Loading cell Mudan-Mul Egg Mine
+Playing music/battle/mw battle1.mp3
+Unhandled controller NiPathController on node 1 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 14 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 22 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 30 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 38 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 46 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 54 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 62 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 75 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 83 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 91 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 99 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 107 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 115 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 123 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 131 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 139 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 147 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 155 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 163 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 171 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 179 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 187 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 193 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 199 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 205 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 211 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 217 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 223 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 229 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 235 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 241 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 247 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 253 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 259 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 265 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 271 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 277 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 283 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 289 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 295 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 301 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 307 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 313 in meshes/e/cure_hit.nif
+Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
+Changing to interior
+Unloading cell Mudan-Mul Egg Mine
+Loading cell Tel Vos, Aryon's Chambers
+Playing music/explore/mx_explore_1.mp3
+Quitting peacefully.
