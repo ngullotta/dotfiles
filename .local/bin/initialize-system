@@ -6,7 +6,8 @@ if ! which git > /dev/null 2>&1; then
 fi
 
 if ! which ansible > /dev/null 2>&1 \
-    || ! which ansible-playbook > /dev/null 2>&1; 
+    || ! which ansible-playbook > /dev/null 2>&1;
+    || ! which ansible-galaxy > /dev/null 2>&1;
 then
   echo "Please install ansible!"
   exit 1
@@ -61,6 +62,7 @@ while test $# -gt 0; do
 done
 
 if [ -d "$HOME/.local/ansible-config" ]; then
+    ansible-galaxy collection install community.general
     cd "$HOME/.local/ansible-config"
     if [ "$dry" = "1" ]; then
         echo "Dry run"
