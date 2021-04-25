@@ -5,10 +5,17 @@ if ! which git > /dev/null 2>&1; then
   exit 1
 fi
 
-if ! which ansible > /dev/null 2>&1 \
-    || ! which ansible-playbook > /dev/null 2>&1;
-    || ! which ansible-galaxy > /dev/null 2>&1;
-then
+if ! which ansible > /dev/null 2>&1; then
+  echo "Please install ansible!"
+  exit 1
+fi
+
+if ! which ansible-galaxy > /dev/null 2>&1; then
+  echo "Please install ansible!"
+  exit 1
+fi
+
+if ! which ansible-galaxy > /dev/null 2>&1; then
   echo "Please install ansible!"
   exit 1
 fi
