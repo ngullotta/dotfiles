@@ -1,0 +1,8 @@
+#!/bin/sh
+img="$(
+    curl --silent $1 \
+        | grep "Image URL.*" \
+        | grep -o "https.*"
+)"
+kitty +kitten icat --place 45x45@45x45 --scale-up --hold "$img"
+clear
