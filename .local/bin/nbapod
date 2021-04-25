@@ -3,9 +3,19 @@ img="$(
     curl --silent $1 \
         | grep -oi "\<img src=.*\>" \
         | grep -o "image/.*" \
-        # | tr '[:upper:]' '[:lower:]'
 )"
-[ -n "$img" ] || exit
+
+if [ -z "$img" ]; then
+    yt="$(
+        curl --silent $1 \
+            | grep -Eo "http.*://www.youtube.com/embed/.{11}" \
+    )"
+    echo "yt=$yt"
+    [ -n "$yt" ] && youtube "$yt"; exit
+fi
+
+[ -n "$img" ] || exit 1
+
 baseurl=$(echo "$1" | grep -oP "http.://\K[^']+/")
 kitty +kitten icat --scale-up --hold "http://$baseurl/$img"
 clear

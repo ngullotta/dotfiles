@@ -30,11 +30,13 @@ shift 1
 if echo "$video" | grep "youtube.com" > /dev/null 2>&1; then
     rewind "$video" "$quality" \
         --player-passthrough=hls \
-        --hls-live-edge 720 \
-        --hls-segment-threads 5 \
+        --hls-segment-threads 10 \
+        --player-no-close \
         "$@"
 else
     rewind youtube.com/"$video" "$quality" \
         --player-passthrough=hls \
+	    --hls-segment-threads 10 \
+        --player-no-close \
         "$@"
 fi
