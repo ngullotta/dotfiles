@@ -1,0 +1,11 @@
+#!/bin/sh
+img="$(
+    curl --silent $1 \
+        | grep -oi "\<img src=.*\>" \
+        | grep -o "image/.*" \
+        # | tr '[:upper:]' '[:lower:]'
+)"
+[ -n "$img" ] || exit
+baseurl=$(echo "$1" | grep -oP "http.://\K[^']+/")
+kitty +kitten icat --scale-up --hold "http://$baseurl/$img"
+clear
