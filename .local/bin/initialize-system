@@ -39,7 +39,7 @@ if [ -d  "$HOME/.cfg" ]; then
     config checkout master \
         && config pull \
         && config submodule init --recursive \
-        && config submodule update
+        && config submodule update --recursive --remote
     # Drop these clutter files that we don't need
     [ -d "$HOME/.github" ] \
         && config update-index --assume-unchanged "$HOME/.github" \
