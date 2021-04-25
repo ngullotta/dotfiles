@@ -28,8 +28,7 @@ if ! [ -d  "$HOME/.cfg" ]; then
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
     config config pull.rebase true
     config checkout master \
-        && config submodule init \
-        && config submodule update
+        && config submodule update --init --recursive --remote
 fi
 
 if [ -d  "$HOME/.cfg" ]; then
@@ -38,8 +37,7 @@ if [ -d  "$HOME/.cfg" ]; then
     # this is rerun at a later date or things are in a weird state
     config checkout master \
         && config pull \
-        && config submodule init \
-        && config submodule update --recursive --remote
+        && config submodule update --init --recursive --remote
     # Drop these clutter files that we don't need
     [ -d "$HOME/.github" ] \
         && config update-index --assume-unchanged "$HOME/.github" \
