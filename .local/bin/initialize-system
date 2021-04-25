@@ -28,7 +28,7 @@ if ! [ -d  "$HOME/.cfg" ]; then
     git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
     config config pull.rebase true
     config checkout master \
-        && config submodule init --recursive \
+        && config submodule init \
         && config submodule update
 fi
 
