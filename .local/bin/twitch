@@ -27,11 +27,25 @@ quality="${2:-best}"
 shift 1
 [ -n "$2" ] && shift 1
 
-rewind twitch.tv/"$username" "$quality" \
-    --twitch-check-vods      \
-    --twitch-disable-ads     \
-    --twitch-low-latency     \
-    --twitch-disable-hosting \
-    --twitch-disable-reruns  \
-    --player-passthrough=hls \
-    "$@"
+if echo "$username" | grep "twitch.tv" > /dev/null 2>&1; then
+    rewind "$username" "$quality" \
+        --twitch-check-vods      \
+        --twitch-disable-ads     \
+        --twitch-low-latency     \
+        --twitch-disable-hosting \
+        --twitch-disable-reruns  \
+        --player-passthrough=hls \
+        --hls-segment-threads 5 \
+        "$@"
+else
+    rewind twitch.tv/"$username" "$quality" \
+        --twitch-check-vods      \
+        --twitch-disable-ads     \
+        --twitch-low-latency     \
+        --twitch-disable-hosting \
+        --twitch-disable-reruns  \
+        --player-passthrough=hls \
+        --hls-segment-threads 5 \
+        "$@"
+fi
+

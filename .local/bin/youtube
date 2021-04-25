@@ -1,0 +1,40 @@
+#!/bin/sh
+
+__usage() {
+    echo "Usage: youtube username [quality] [--additional-flags]"
+    exit "${1:-0}"
+}
+
+[ "$#" -gt 0 ] || >&2 __usage 1
+while getopts ":h" option; do
+    case $option in
+        h)
+            __usage
+            ;;
+        *) ;;
+    esac
+done
+
+
+if ! which rewind > /dev/null; then
+    echo "Please install rewind package in order to use this utility"
+    exit 1
+fi
+
+video="$1"
+quality="${2:-best}"
+
+shift 1
+[ -n "$2" ] && shift 1
+
+if echo "$video" | grep "youtube.com" > /dev/null 2>&1; then
+    rewind "$video" "$quality" \
+        --player-passthrough=hls \
+        --hls-live-edge 720 \
+        --hls-segment-threads 5 \
+        "$@"
+else
+    rewind youtube.com/"$video" "$quality" \
+        --player-passthrough=hls \
+        "$@"
+fi
