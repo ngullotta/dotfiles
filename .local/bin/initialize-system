@@ -38,7 +38,7 @@ if [ -d  "$HOME/.cfg" ]; then
     # this is rerun at a later date or things are in a weird state
     config checkout master \
         && config pull \
-        && config submodule init --recursive \
+        && config submodule init \
         && config submodule update --recursive --remote
     # Drop these clutter files that we don't need
     [ -d "$HOME/.github" ] \
