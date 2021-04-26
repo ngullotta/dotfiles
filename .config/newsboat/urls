@@ -1,0 +1,22 @@
+"=== Comics ==="
+https://xkcd.com/rss.xml comics
+
+" "
+"=== Science ==="
+http://antwrp.gsfc.nasa.gov/apod.rss science
+
+" "
+"=== Youtube ==="
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJHA_jMfCvEnv-3kRjTCQXw youtube # Babish
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2eYFnH61tmytImy1mTYvhA youtube # Luke
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw youtube # LTT
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2rzsm1Qi6N1X-wuOg_p0Ng youtube # Project Farm
+
+" "
+"=== Twitch ==="
+https://twitchrss.appspot.com/vodonly/kitboga twitch
+https://twitchrss.appspot.com/vodonly/clintstevens twitch
+
+" "
+"=== News ==="
+https://feeds.npr.org/1001/rss.xml news
