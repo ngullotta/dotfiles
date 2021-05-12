@@ -1,51 +1,111 @@
 #!/bin/sh
 
-__usage() {
-    echo "Usage: twitch username [quality] [--additional-flags]"
-    exit "${1:-0}"
+print_help()
+{
+    printf "Usage: %s [-h|--help] <username> <quality>\n" "$(basename "$0")"
+    printf "\t%s\n" "<username>: The Twitch username of the stream"
+    printf "\t%s\n" "<quality>: Stream quality [360-1080p, best]"
+    printf "\t%s\n" "-h, --help: Prints help"
+
+    exit "${1:-1}"
 }
 
-[ "$#" -gt 0 ] || >&2 __usage 1
-while getopts ":h" option; do
-    case $option in
-        h)
-            __usage
-            ;;
-        *) ;;
-    esac
-done
+_required_pos_count=1
+parse_commandline() {
+    [ $# -gt 0 ] || >&2 print_help
+
+    _positionals_count=0
+    while test $# -gt 0; do
+        _key="$1"
+        case "$_key" in
+            -h|--help)
+                print_help 0
+                exit 0
+                ;;
+            # We support getopts-style short arguments clustering,
+            # so as -h doesn"t accept value, other short options may be appended to it, so we watch for -h*.
+            # After stripping the leading -h from the argument, we have to make sure
+            # that the first character that follows coresponds to a short option.
+            -h*)
+                print_help
+                exit 0
+                ;;
+            *)
+                _last_positional="$1"
+                _positionals="$_positionals $_last_positional"
+                _positionals_count=$((_positionals_count + 1))
+                ;;
+        esac
+        shift
+    done
+
+    [ $_positionals_count -lt $_required_pos_count ] && >&2 print_help
+}
+
+parse_commandline "$@"
+
+_non_default_args=""
+parse_non_default() {
+
+    while test $# -gt 0; do
+        _key="$1"
+        case "$_key" in
+            --twitch-check-vods)
+                shift
+                ;;
+            --twitch-disable-ads)
+                shift
+                ;;
+            --twitch-low-latency)
+                shift
+                ;;  
+            --twitch-disable-hosting)
+                shift
+                ;;
+            --twitch-disable-reruns)
+                shift
+                ;;
+            --player-passthrough=*)
+                shift
+                ;;
+            --hls-segment-threads*)
+                shift
+                ;;
+            *)
+                _non_default_args="$_non_default_args $_key"
+        esac
+        shift
+    done
+}
 
 
-if ! which rewind > /dev/null; then
-    echo "Please install rewind package in order to use this utility"
-    exit 1
-fi
+username=
+quality=
+url="twitch.tv"
 
-username="$1"
-quality="${2:-best}"
+username="$1" && shift
+[ -n "$1" ] && ! [ ${1:0:1} = "-" ] && quality="$1" && shift
+[ -z "$quality" ] && quality="best"
 
-shift 1
-[ -n "$2" ] && shift 1
+# Get whatever args are left that aren't default
+parse_non_default "$@"
 
-if echo "$username" | grep "twitch.tv" > /dev/null 2>&1; then
-    rewind "$username" "$quality" \
-        --twitch-check-vods      \
-        --twitch-disable-ads     \
-        --twitch-low-latency     \
-        --twitch-disable-hosting \
-        --twitch-disable-reruns  \
-        --player-passthrough=hls \
-        --hls-segment-threads 5 \
-        "$@"
+_base_cmd="rewind"
+if echo "$username" | grep "$url" > /dev/null 2>&1; then
+    _base_cmd="$_base_cmd $username $quality"
 else
-    rewind twitch.tv/"$username" "$quality" \
-        --twitch-check-vods      \
-        --twitch-disable-ads     \
-        --twitch-low-latency     \
-        --twitch-disable-hosting \
-        --twitch-disable-reruns  \
-        --player-passthrough=hls \
-        --hls-segment-threads 5 \
-        "$@"
+    _base_cmd="$_base_cmd $url/$username $quality"
 fi
 
+_default_args="
+    --twitch-check-vods \
+    --twitch-disable-ads \
+    --twitch-low-latency \
+    --twitch-disable-hosting \
+    --twitch-disable-reruns \
+    --player-passthrough=hls \
+    --hls-segment-threads 5
+"
+args="$_default_args $_non_default_args"
+
+$_base_cmd $args

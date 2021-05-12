@@ -105,3 +105,5 @@ for script in "$scripts"/*; do
 done
 
 alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+# Allows auto-complete even through alias
+setopt complete_aliases
