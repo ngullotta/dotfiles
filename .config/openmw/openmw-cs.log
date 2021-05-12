@@ -1,29 +1,4 @@
 Crash handler installed
-Loading settings file: /etc/openmw/openmw-cs.cfg
-Loading config file: /etc/openmw/openmw.cfg
+Loading settings file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/openmw-cs.cfg
+Loading config file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/openmw.cfg
 Loading config file: /home/legion/.config/openmw/openmw.cfg
-Loading config file: /etc/openmw/openmw.cfg
-Loading config file: /home/legion/.config/openmw/openmw.cfg
-Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Morrowind.bsa
-Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Tribunal.bsa
-Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Bloodmoon.bsa
-Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/TR_Data.bsa
-Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/PT_Data.bsa
-Adding data directory /usr/share/openmw/data
-Adding data directory /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/patch_for_purists
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/expansion_delay
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/facelift
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/npc_additions
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/itextures
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_rebuilt_core
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_data
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_travels
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_cyrodil
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/optimization_core
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/dahrk_core
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/mca
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/tr_skyrim
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/better_regen
-Adding data directory /home/legion/OpenMW/mods/open_mw_mods/natural_leveling
-Adding data directory /home/legion/.local/share/openmw/data

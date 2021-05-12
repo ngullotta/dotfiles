@@ -1,19 +1,19 @@
 Crash handler installed
-Loading config file: /etc/openmw/openmw.cfg
+Loading config file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/openmw.cfg
 Loading config file: /home/legion/.config/openmw/openmw.cfg
 OpenMW version 0.46.0
+Revision: efaeb31bf9
 Using default (English) font encoding.
-OSG version: 3.4.1
-SDL version: 2.0.14
-Loading settings file: /etc/openmw/settings-default.cfg
+OSG version: 3.4.2
+SDL version: 2.0.8
+Loading settings file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/settings-default.cfg
 Loading settings file: /home/legion/.config/openmw/settings.cfg
 Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Morrowind.bsa
 Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Tribunal.bsa
 Adding BSA archive /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files/Bloodmoon.bsa
 Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/TR_Data.bsa
 Adding BSA archive /home/legion/OpenMW/mods/open_mw_mods/tr_data/PT_Data.bsa
-Adding data directory /usr/share/openmw/resources/vfs
-Adding data directory /usr/share/openmw/data
+Adding data directory ./resources/vfs
 Adding data directory /home/legion/.steam/steam/steamapps/common/Morrowind/Data Files
 Adding data directory /home/legion/OpenMW/mods/open_mw_mods/patch_for_purists
 Adding data directory /home/legion/OpenMW/mods/open_mw_mods/expansion_delay
@@ -33,10 +33,9 @@ Adding data directory /home/legion/OpenMW/mods/open_mw_mods/natural_leveling
 Adding data directory /home/legion/OpenMW/mods/open_mw_mods/natural_growth
 Adding data directory /home/legion/OpenMW/mods/open_mw_mods/nhm
 Adding data directory /home/legion/OpenMW/mods/open_mw_mods/nhm_deluxe
+Adding data directory /home/legion/OpenMW/mods/open_mw_mods/masterindex
 Adding data directory /home/legion/.local/share/openmw/data
 Loading keybindings file: /home/legion/.config/openmw/input_v3.xml
-DataManager::getData: Failed to open '/usr/share/fonts/dejavu/DejaVuLGCSansMono.ttf'
-DataManager::getData: Failed to open '/usr/share/fonts/dejavu/DejaVuLGCSansMono.ttf'
 Initializing OpenAL...
 Opened "Scarlett Solo USB Analog Stereo"
   ALC Version: 1.1
@@ -50,12 +49,13 @@ Allocated 256 sound sources
 Low-pass filter supported
 EAX Reverb supported
 Enumerated output devices:
-  Scarlett Solo USB Analog Stereo  GM204 High Definition Audio Controller Digital Stereo (HDMI)  Built-in Audio Digital Stereo (IEC958)
+  Scarlett Solo USB Analog Stereo  Built-in Audio Digital Stereo (IEC958)  GM204 High Definition Audio Controller Digital Stereo (HDMI)
 Enumerated HRTF names:
   default-44100  default-48000  Built-In 44100hz  Built-In 48000hz
 Loading content file Morrowind.esm
 Loading content file Tribunal.esm
 Loading content file Bloodmoon.esm
+Loading content file master_index.esp
 Loading content file MCA.esm
 Loading content file Tamriel_Data.esm
 Loading content file Cyrodiil_Main.esm
@@ -93,234 +93,27 @@ NPC 'pc_str_tullius juro' (Tullius Juro) has nonexistent faction 'T_Cyr_Imperial
 NPC 'pc_vvard_titus corilex' (Titus Corilex) has nonexistent faction 'T_Cyr_EastEmpireCompany', ignoring it.
 Playing music/special/morrowind title.mp3
 Changing to interior
-Loading cell Balmora, Nerevars House
-Warning: TR_m3_q_hideseekdrink line 13, column 19 (PlaySound): Stray explicit reference
-Playing music/explore/mx_explore_1.mp3
-Controller R2_Claw02 present more than once in meshes/r/xsiltstrider.kf, ignoring later version
-Unloading cell Balmora, Nerevars House
-Loading cell -3, -2
-Loading cell -3, -1
-Loading cell -2, -2
-Loading cell -4, -2
-Loading cell -3, -3
-Loading cell -2, -1
-Loading cell -4, -1
-Loading cell -2, -3
-Loading cell -4, -3
-Warning: OutsideBanner line 38, column 6 (endif): endif without matching if/elseif
-Warning: MCA_companions line 57, column 22 ("player"): Extra argument
-Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
-Unhandled controller NiPathController on node 49 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 52 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 55 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 58 in meshes/xspriggan_summon.nif
-Changing to interior
-Unloading cell -4, -3
-Unloading cell -4, -2
-Unloading cell -4, -1
-Unloading cell -3, -3
-Unloading cell -3, -2
-Unloading cell -3, -1
-Unloading cell -2, -3
-Unloading cell -2, -2
-Unloading cell -2, -1
-Loading cell Balmora, Nalcarya of White Haven: Fine Alchemist
+Loading cell Old Mournhold: City Gate
+Playing music/explore/mx_explore_2.mp3
 Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
 Changing to interior
-Unloading cell Balmora, Nalcarya of White Haven: Fine Alchemist
-Loading cell Sadrith Mora, Telvanni Council House
-Changing to interior
-Unloading cell Sadrith Mora, Telvanni Council House
-Loading cell Sadrith Mora, Telvanni Council House, Entry
-Unloading cell Sadrith Mora, Telvanni Council House, Entry
-Loading cell 17, 5
-Loading cell 16, 5
-Loading cell 17, 4
-Loading cell 17, 6
-Loading cell 18, 5
-Loading cell 16, 4
-Loading cell 16, 6
-Loading cell 18, 4
-Loading cell 18, 6
-Unloading cell 16, 6
-Unloading cell 17, 6
-Unloading cell 18, 6
-Loading cell 17, 3
-Loading cell 16, 3
-Loading cell 18, 3
-Unhandled controller NiPathController on node 49 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 52 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 55 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 58 in meshes/xspriggan_summon.nif
-Unloading cell 16, 3
-Unloading cell 16, 4
-Unloading cell 16, 5
-Loading cell 19, 4
-Loading cell 19, 3
-Loading cell 19, 5
-Warning: blockedDoor line 6, column 16 (blockeddoor): Names for script blockedDoor do not match
-Unloading cell 17, 5
-Unloading cell 18, 5
-Unloading cell 19, 5
-Loading cell 18, 2
-Loading cell 17, 2
-Loading cell 19, 2
-Changing to interior
-Unloading cell 17, 2
-Unloading cell 17, 3
-Unloading cell 17, 4
-Unloading cell 18, 4
-Unloading cell 18, 2
-Unloading cell 18, 3
-Unloading cell 19, 2
-Unloading cell 19, 3
-Unloading cell 19, 4
-Loading cell Sadrith Mora, Dirty Muriel's Cornerclub
-Unloading cell Sadrith Mora, Dirty Muriel's Cornerclub
-Loading cell 18, 3
-Loading cell 17, 3
-Loading cell 18, 2
-Loading cell 18, 4
-Loading cell 19, 3
-Loading cell 17, 2
-Loading cell 17, 4
-Loading cell 19, 2
-Loading cell 19, 4
-Unhandled controller NiPathController on node 49 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 52 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 55 in meshes/xspriggan_summon.nif
-Unhandled controller NiPathController on node 58 in meshes/xspriggan_summon.nif
-Unloading cell 17, 2
-Unloading cell 18, 2
-Unloading cell 19, 2
-Loading cell 18, 5
-Loading cell 17, 5
-Loading cell 19, 5
-Playing music/explore/mx_explore_3.mp3
-Changing to interior
-Unloading cell 17, 3
-Unloading cell 17, 4
-Unloading cell 18, 4
-Unloading cell 17, 5
-Unloading cell 18, 3
-Unloading cell 18, 5
-Unloading cell 19, 3
-Unloading cell 19, 4
-Unloading cell 19, 5
-Loading cell Sadrith Mora, Morag Tong Guild
+Unloading cell Old Mournhold: City Gate
+Loading cell Old Mournhold: Residential Ruins
 Playing music/battle/mw battle1.mp3
 Playing music/explore/mx_explore_6.mp3
+Playing music/battle/mw battle 8.mp3
 Changing to interior
-Unloading cell Sadrith Mora, Morag Tong Guild
-Loading cell Sadrith Mora, Telvanni Council House
+Unloading cell Old Mournhold: Residential Ruins
+Loading cell Old Mournhold: Teran Hall
+Playing music/battle/mw battle 7.mp3
+Unhandled controller NiPathController on node 90 in meshes/e/magic_cast_myst.nif
 Changing to interior
-Unloading cell Sadrith Mora, Telvanni Council House
-Loading cell Sadrith Mora, Telvanni Council House, Entry
-Unloading cell Sadrith Mora, Telvanni Council House, Entry
-Loading cell 17, 5
-Loading cell 16, 5
-Loading cell 17, 4
-Loading cell 17, 6
-Loading cell 18, 5
-Loading cell 16, 4
-Loading cell 16, 6
-Loading cell 18, 4
-Loading cell 18, 6
-Unloading cell 16, 4
-Unloading cell 16, 5
-Unloading cell 16, 6
-Unloading cell 17, 4
-Unloading cell 18, 4
-Unloading cell 17, 5
-Unloading cell 17, 6
-Unloading cell 18, 5
-Unloading cell 18, 6
-Loading cell 15, -13
-Loading cell 14, -13
-Loading cell 15, -12
-Loading cell 15, -14
-Loading cell 16, -13
-Loading cell 14, -12
-Loading cell 14, -14
-Loading cell 16, -12
-Loading cell 16, -14
+Unloading cell Old Mournhold: Teran Hall
+Loading cell Old Mournhold: Abandoned Passageway
+Playing music/explore/mx_explore_3.mp3
+Playing music/battle/mw battle 4.mp3
 Changing to interior
-Unloading cell 14, -14
-Unloading cell 14, -13
-Unloading cell 14, -12
-Unloading cell 15, -14
-Unloading cell 15, -13
-Unloading cell 15, -12
-Unloading cell 16, -14
-Unloading cell 16, -13
-Unloading cell 16, -12
-Loading cell Tel Branora, Upper Tower
-Changing to interior
-Unloading cell Tel Branora, Upper Tower
-Loading cell Tel Branora, Upper Tower: Therana's Chamber
-Playing music/battle/mw battle5.mp3
-Unhandled controller NiPathController on node 68 in meshes/e/magic_hit_rest.nif
-Unhandled controller NiPathController on node 79 in meshes/e/magic_hit_rest.nif
-Unhandled controller NiPathController on node 87 in meshes/e/magic_hit_rest.nif
-Playing music/explore/mx_explore_2.mp3
-Changing to interior
-Unloading cell Tel Branora, Upper Tower: Therana's Chamber
-Loading cell Sadrith Mora, Telvanni Council House
-Unloading cell Sadrith Mora, Telvanni Council House
-Changing to interior
-Loading cell Sadrith Mora, Telvanni Council House
-Playing music/explore/mx_explore_4.mp3
-Unloading cell Sadrith Mora, Telvanni Council House
-Loading cell 15, -13
-Loading cell 14, -13
-Loading cell 15, -12
-Loading cell 15, -14
-Loading cell 16, -13
-Loading cell 14, -12
-Loading cell 14, -14
-Loading cell 16, -12
-Loading cell 16, -14
-Changing to interior
-Unloading cell 15, -14
-Unloading cell 15, -13
-Unloading cell 14, -12
-Unloading cell 16, -14
-Unloading cell 16, -13
-Unloading cell 16, -12
-Unloading cell 15, -12
-Unloading cell 14, -14
-Unloading cell 14, -13
-Loading cell Tel Branora, Upper Tower
-Changing to interior
-Unloading cell Tel Branora, Upper Tower
-Loading cell Tel Branora, Upper Tower: Therana's Chamber
-Playing music/battle/mw battle2.mp3
-Unhandled controller NiPathController on node 68 in meshes/e/magic_hit_rest.nif
-Unhandled controller NiPathController on node 79 in meshes/e/magic_hit_rest.nif
-Unhandled controller NiPathController on node 87 in meshes/e/magic_hit_rest.nif
-Playing music/explore/morrowind title.mp3
-Changing to interior
-Unloading cell Tel Branora, Upper Tower: Therana's Chamber
-Loading cell Sadrith Mora, Telvanni Council House
-Changing to interior
-Unloading cell Sadrith Mora, Telvanni Council House
-Loading cell Sadrith Mora, Telvanni Council House, Entry
-Unloading cell Sadrith Mora, Telvanni Council House, Entry
-Loading cell 17, 5
-Loading cell 16, 5
-Loading cell 17, 4
-Loading cell 17, 6
-Loading cell 18, 5
-Loading cell 16, 4
-Loading cell 16, 6
-Loading cell 18, 4
-Loading cell 18, 6
-Unloading cell 16, 6
-Unloading cell 18, 6
-Unloading cell 17, 6
-Loading cell 17, 3
-Loading cell 16, 3
-Loading cell 18, 3
-Changed setting: [Map] global = false
-Updating settings file: "/home/legion/.config/openmw/settings.cfg"
+Unloading cell Old Mournhold: Abandoned Passageway
+Loading cell Old Mournhold: Battlefield
+Playing music/explore/mx_explore_5.mp3
 Quitting peacefully.
