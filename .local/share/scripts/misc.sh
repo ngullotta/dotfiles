@@ -1,7 +1,8 @@
 #!/bin/sh
 
 reload() {
-    [ -f "$HOME/.zshrc" ] && source "$HOME/.zshrc" && clear
+    # shellcheck source=/dev/null
+    [ -f "$HOME/.zshrc" ] && . "$HOME/.zshrc" && clear
 }
 
 center() {
@@ -9,12 +10,17 @@ center() {
 
     termwidth=
     if [ -n "$TERM" ] && ! [ "$TERM" = "dumb" ]; then
-        TERM_COLS="$(tput cols)"
+        termwidth="$(tput cols)"
     else
-        TERM_COLS="$(tput cols -T ansi)"
+        termwidth="$(tput cols -T ansi)"
     fi
 
-    padding="$(printf '%0.1s' ={1..500})"
+    i=1
+    while [ $i -le 500 ]; do
+        padding="$padding$(printf '%-.1s' =$i)"
+        i=$((i+1))
+    done
+
     printf "%*.*s %s %*.*s\n"        \
         0                            \
         "$(((termwidth-2-${#1})/2))" \

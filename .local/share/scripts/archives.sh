@@ -3,7 +3,7 @@
 extract() {
     for n in "$@"; do
         if ! [ -f "$n" ]; then
-            2&> echo "'$n' - file does not exist" && return 1
+            echo "'$n' - file does not exist" 1>&2 && return 1
         fi
 
         case "${n%,}" in
