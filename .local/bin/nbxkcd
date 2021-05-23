@@ -5,5 +5,5 @@ img="$(
         | grep -o "https.*"
 )"
 [ -n "$img" ] || exit
-kitty +kitten icat --place 45x45@45x45 --scale-up --hold "$img"
+kitty +kitten icat --scale-up --hold "$img"
 clear
