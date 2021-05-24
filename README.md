@@ -1,0 +1,76 @@
+# dotfiles
+My personal dotfiles
+
+## Installation
+To initialize the system with these dotfiles, you must first have `gpg` and 
+`pipethis` installed.
+
+First, import the public gpg used to sign this script:
+```
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mQINBF8v9BgBEADSXvHVI2Xc8OjN/ZUEWCTOVWk8SrsVcoIfyi9oDg6h8HD9zgKz
+pFKqMqQYKHvJ452+IFphNmcEURohIgz2KMqYv6SV0ec3ka0b/3tq+0oekyDetIUc
+xci1AMSrtf5cBeAjs88HCfPvyKhfFYJWB46OqLiILeTjSFlRlZkbWwSlS66v33Bx
+DGd2wKLpYQL2q88DwPxCKmgIKMMYsbPxLOeJk9SEBV463vJb1SrW1WMM/3nsV5Nw
+FDpfRa/bLn7n4YbbPzMiVSa6AkDjISbKkPZ+tIawhcxE36VI+qQTyR0E0kMHpSjA
+pnqqcAXI8efQUCEsz2MCUp99TCoR4joazgr16bLohBCOH/esizQPktUUKSRB7xFG
+3aXOKEKPS/3vNMIE7ESeRsJ43SUSvr9wwCnX/gLvKUgvU/YRYjgWp+ZuPF8U3y4l
++oUy+ihFjRJVQIovsyt5c00kLEre4ozbdKpgmaqEEjqYlY3OZ1ZCtMdWId0Orr9f
+8+hM42d7j99vyf3B6/yHxVfIhem96KvB7DxSwlaK/gL/sjTqfsvsHB9kRLaTeZB8
+bKOMn1D/nz6v6urdQV4gzsKwa9Mnz7Hqvk9TIvHiuyUYtNSyWwDGX92ek6qnmfnO
+4lhL8J11d5MeNIPhwuT+vJ/A7mtwlaZ3/wmp4ZBKobgafCYHEDlbvjWtBQARAQAB
+tDROaWtvbGF1cyBHdWxsb3R0YSA8bmlrb2xhdXMuZ3VsbG90dGFAcHJvdG9ubWFp
+bC5jb20+iQJUBBMBCAA+FiEE02Gn7xad54TMiWBsodFlp3qIuWwFAl8v9BgCGwMF
+CQHhM4AFCwkIBwIGFQoJCAsCBBYCAwECHgECF4AACgkQodFlp3qIuWy5yBAA0gqZ
+//e+6nlpg+irBSSRDL6nuWuK1GQdx/OD5GIJVspn2PzChshYEps8saKi1wDLOGZ9
+1WqVWgRak4jKF8Rnp5C2hLWkUOvNNDWWzDWB76uyA+ocr4+1ETaVg5xxot/bjz7Y
+aCkHgPgThh8mfYvWJLZqcsXVFQ4dxb7n2Yk8BwdeVpQEgj+rLEuciYCLu6hNEJRB
+D7/jXM2oJSGeEI80F4MEqaO5pr63DUOcRnIxDmxsNFdjXYSZ4lAci7W+sByFszOw
+5Z4jNlTChUweYCyAqOcR0VZiaNc/j0CEszh75Dh2L+kRZi4Z5G05XqtfKtCg7XCu
+d2NAS2ga/r7J7/7ntj3CLC88lJEMOIBiiSX9JJI/Pxy2DAbZJors5gMxWOaLaknf
+JKj3kmLwVSONCq9LfxA9J2RctfHXMcGpfXC3Bb01yRcTxgXWsGmZWTZB92OctQ4w
+AHm8f51f0CgXl5tXNiEDTNOeo5LBiauj266vgJ3Bp//0gMtPiRa3CSfqAZyYF5YE
+qiBJ89EQu0Yq3JHzdLSX1pqPBGx+nmt1IIpc1idG3R7RUlr1+vagxlBHGgtJkQp4
+MWia7YVqWdS61V1OzfmoPWNTbVB0tNJSfxQjlwBFuFgiUcbN5F1c5ebgePX2qBBL
+643k+31F1SFRWYG8SweF6X6/+DLsHvNAva7GOD65Ag0EXy/0GAEQAMbTgx3Dgf78
+zEgqq3WgZEZ0rGXeVWuLDNnHXcMKrkeAPItQq6AWbAlrptQu/O5BXWDIH4VhZ9E4
+PIVgz3bbEdsX3jyW3Sm/YWvjOwDPJ8aKNjwc+UAJ9vh12plwKb+wYsZI2QFdAjHG
+5JAoNkLmwD1qQGN3x03H0SThObeu+xQ7ri7OjVx/sVtAC/WBa0h3nYVhi2mrmg7G
+IajeqkvDKZR3Lipeea8BwUJThfgFmchV7movlwlcm2Yr8ekD03THP6R7S7QI3g8B
+7IBtX8DcGd3OS3nLoFQP35aQ7V2ZwaaL5qXEoRQsyBp93iYbgprPZBJ8WEo0Ixe1
+BGBZrSxo/lt/7XPRusNNWeBS59WN0E6cXvQjjMJQo0g7+r6T3LmlL4fiqW1Wx3wz
+qMK7jwQWlDSvsr5zBv9le//Q4grA3LnaHiAiSx3KkDPnyZ2ZryZajsl4s/xr/+7S
+CCM9AVvdw68tNaMRMfF6cvsNQR8q0ob3LnbLo8AE6aG9vZidXkTY7zV/r2vlgXqx
+uoQ3BfSA1w1gLH5/pUs7C5wwVgSjspNJIg5Psztz22SS36Y/usfb7sqCCXvQifwx
+2HcICSpECVpdB3zfNEFjbcnFB+D9jZB0wFfhBZDiCZzg0KqR9wc/tKHiDLDkUUaY
+QS5ftw2oP6Cqe7jDIXzK/h3Rqs1h6y7/ABEBAAGJAjwEGAEIACYWIQTTYafvFp3n
+hMyJYGyh0WWneoi5bAUCXy/0GAIbDAUJAeEzgAAKCRCh0WWneoi5bLdnEACKDuRy
+3PugcGu90PglzxLFxicRX/25bdMSlXwKcN1tTGDrEHAs7RXpcms+ZAX9BmTkbObp
+/vfTSY6evfB5mKGSVwl9bUQYyGSejPb6OE276KS7qCzDOxKbAwPE7AElsBEWOzIg
+8P2F/IMTs8DOjo5Fcnt+cKl42VdSuJq3NCSFx0KXghJkM/FN81YfWQOzJxrc8GSE
+fVBA8243OqJ1sFxFMPPGsVE/D/FJMnWn3yEChNTyjr7zSZ9Sr+mDCdeqFhWPr+1P
+t3AxvpATixSuim+py+FlVNgOA3FK5EJ7gF101RO8eYVjCFLeElx/yB2GnYlNQB3A
+NcC4n74MG85awkT8r3MX6dY6z9fxt0F3zlbIM2zKiL9AYajnoA8kHiNBTWYlFSxA
+orqxFLMLXJrTGluiuqSS2mK4ZR8e01dfn+uAOZesag7XD7W7k6BFs6u3/IXXvAa7
+hvxdcW1mZuq7W/y2mFv35ue/T/KDhiX/HKPYGwiRcegCk7zMgeMzcn1h9d9CGijj
+VC54LLkCwq44WIAl83Y2KWKwDRNGIqr6q+yfNyvX0ihaIPB5VK/DbeRLZkTeQOM4
+3Wr4gYV11s4Mmvn+ru8LH+S2YBYIH1OTNlALwKG8NouIYY3iZ4dFMSsXpYkqFxEZ
+Maswz2cNH3nHJUTiuJAv0boHdDT1H3D6/xb2+g==
+=6mNf
+-----END PGP PUBLIC KEY BLOCK-----
+```
+
+To do this do the following (assumes you've saved the key as `private.key`):
+```shell
+$ gpg --import private.key
+$ gpg --edit-key D361A7EF169DE784CC89606CA1D165A77A88B96C
+gpg> trust
+gpg> 5
+gpg> y
+```
+
+Next, run:
+```shell
+$ pipethis https://raw.githubusercontent.com/legionxvx/dotfiles/master/.local/bin/initialize-system
+```
