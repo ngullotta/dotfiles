@@ -1,4 +1,5 @@
 #!/bin/sh
+# // ; '' PIPETHIS_AUTHOR D361A7EF169DE784CC89606CA1D165A77A88B96C
 
 if ! which git > /dev/null 2>&1; then
   echo "Please install git!"
@@ -20,60 +21,68 @@ if ! which ansible-galaxy > /dev/null 2>&1; then
   exit 1
 fi
 
-alias config="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-if ! [ -d  "$HOME/.cfg" ]; then
-    echo "Pulling down dotfiles..."
-    mkdir -p "$HOME/.cfg"
-    # Non-SSH because we don't have keys set up yet...
-    git clone --bare "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
-    config config pull.rebase true
-    config checkout master \
-        && config submodule update --init --recursive --remote
-fi
+init() {
+    alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+    if ! [ -d  "$HOME/.cfg" ]; then
+        echo "Pulling down dotfiles..."
+        mkdir -p "$HOME/.cfg"
 
-if [ -d  "$HOME/.cfg" ]; then
-    config config pull.rebase true
-    # This is essentially the same step as earlier, just here incase 
-    # this is rerun at a later date or things are in a weird state
-    config checkout master \
-        && config pull \
-        && config submodule update --init --recursive --remote
-    # Drop these clutter files that we don't need
-    [ -d "$HOME/.github" ] \
-        && config update-index --assume-unchanged "$HOME/.github" \
-        && rm -r "$HOME/.github"
+        # Non-SSH because we don't have keys set up yet...
+        git clone --bare \
+            "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
 
-    [ -f "$HOME/README.md" ] \
-        && config update-index --assume-unchanged "$HOME/README.md" \
-        && rm "$HOME/README.md"
-fi
-
-while test $# -gt 0; do
-    case "$1" in
-        -h|--help)
-            echo "Options:"
-            echo "-h, --help  Show this message."
-            echo "-d, --dry   Check playbook."
-            exit 0
-            ;;
-        -d|--dry)
-            shift
-            dry=1
-            ;;
-        *)
-            break
-            ;;
-    esac
-done
-
-if [ -d "$HOME/.local/ansible-config" ]; then
-    ansible-galaxy collection install community.general
-    cd "$HOME/.local/ansible-config"
-    if [ "$dry" = "1" ]; then
-        echo "Dry run"
-        sudo make dry-run
-        exit
+        config config pull.rebase true
+        config checkout master \
+            && config submodule update --init --recursive --remote
     fi
-    sudo make dry-run && sudo make run
-    cd
-fi
+
+    if [ -d  "$HOME/.cfg" ]; then
+        config config pull.rebase true
+        # This is essentially the same step as earlier, just here incase 
+        # this is rerun at a later date or things are in a weird state
+        config checkout master \
+            && config pull \
+            && config submodule update --init --recursive --remote
+
+        # Drop these clutter files that we don't need
+        [ -d "$HOME/.github" ] \
+            && config update-index --assume-unchanged "$HOME/.github" \
+            && rm -r "$HOME/.github"
+
+        [ -f "$HOME/README.md" ] \
+            && config update-index --assume-unchanged "$HOME/README.md" \
+            && rm "$HOME/README.md"
+    fi
+
+    while test $# -gt 0; do
+        case "$1" in
+            -h|--help)
+                echo "Options:"
+                echo "-h, --help  Show this message."
+                echo "-d, --dry   Check playbook."
+                exit 0
+                ;;
+            -d|--dry)
+                shift
+                dry=1
+                ;;
+            *)
+                break
+                ;;
+        esac
+    done
+
+    if [ -d "$HOME/.local/ansible-config" ]; then
+        ansible-galaxy collection install community.general
+        cd "$HOME/.local/ansible-config" || exit 1
+        if [ "$dry" = "1" ]; then
+            echo "Dry run"
+            sudo make dry-run
+            exit
+        fi
+        sudo make dry-run && sudo make run
+        cd || exit 1
+    fi
+}
+
+init "$@"
