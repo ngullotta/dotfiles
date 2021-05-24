@@ -3,7 +3,7 @@ My personal dotfiles
 
 ## Installation
 To initialize the system with these dotfiles, you must first have `gpg` and 
-`pipethis` installed.
+[pipethis](https://github.com/ellotheth/pipethis) installed.
 
 First, import the public gpg used to sign this script:
 ```
