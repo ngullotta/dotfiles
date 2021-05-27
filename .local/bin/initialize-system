@@ -1,6 +1,6 @@
 #!/bin/sh
-# // ; '' PIPETHIS_AUTHOR D361A7EF169DE784CC89606CA1D165A77A88B96C
-
+# FINGERPRINT D361A7EF169DE784CC89606CA1D165A77A88B96C
+set -m
 if ! which git > /dev/null 2>&1; then
   echo "Please install git!"
   exit 1
