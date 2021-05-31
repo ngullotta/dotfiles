@@ -1,0 +1,134 @@
+06:50:07  |  Platform  |  Info  |  * Initialise: RenderManager  |  /home/legion/Projects/src/openmw/components/myguiplatform/myguirendermanager.cpp  |  386
+06:50:07  |  Platform  |  Info  |  RenderManager successfully initialized  |  /home/legion/Projects/src/openmw/components/myguiplatform/myguirendermanager.cpp  |  410
+06:50:07  |  Core  |  Info  |  * Initialise: Gui  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_Gui.cpp  |  61
+06:50:07  |  Core  |  Info  |  * MyGUI version 3.2.2  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_Gui.cpp  |  63
+06:50:07  |  Core  |  Info  |  * Initialise: ResourceManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  32
+06:50:07  |  Core  |  Info  |  ResourceManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  40
+06:50:07  |  Core  |  Info  |  * Initialise: LayerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  33
+06:50:07  |  Core  |  Info  |  LayerManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  41
+06:50:07  |  Core  |  Info  |  * Initialise: WidgetManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_WidgetManager.cpp  |  53
+06:50:07  |  Core  |  Info  |  WidgetManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_WidgetManager.cpp  |  84
+06:50:07  |  Core  |  Info  |  * Initialise: InputManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_InputManager.cpp  |  46
+06:50:07  |  Core  |  Info  |  InputManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_InputManager.cpp  |  66
+06:50:07  |  Core  |  Info  |  * Initialise: SubWidgetManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SubWidgetManager.cpp  |  36
+06:50:07  |  Core  |  Info  |  SubWidgetManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SubWidgetManager.cpp  |  56
+06:50:07  |  Core  |  Info  |  * Initialise: SkinManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SkinManager.cpp  |  36
+06:50:07  |  Core  |  Info  |  SkinManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SkinManager.cpp  |  46
+06:50:07  |  Core  |  Info  |  * Initialise: FontManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FontManager.cpp  |  32
+06:50:07  |  Core  |  Info  |  FontManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FontManager.cpp  |  42
+06:50:07  |  Core  |  Info  |  * Initialise: ControllerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ControllerManager.cpp  |  33
+06:50:07  |  Core  |  Info  |  ControllerManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ControllerManager.cpp  |  42
+06:50:07  |  Core  |  Info  |  * Initialise: PointerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PointerManager.cpp  |  43
+06:50:07  |  Core  |  Info  |  PointerManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PointerManager.cpp  |  62
+06:50:07  |  Core  |  Info  |  * Initialise: ClipboardManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ClipboardManager.cpp  |  32
+06:50:07  |  Core  |  Info  |  ClipboardManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ClipboardManager.cpp  |  39
+06:50:07  |  Core  |  Info  |  * Initialise: LayoutManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayoutManager.cpp  |  28
+06:50:07  |  Core  |  Info  |  LayoutManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayoutManager.cpp  |  35
+06:50:07  |  Core  |  Info  |  * Initialise: DynLibManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_DynLibManager.cpp  |  26
+06:50:07  |  Core  |  Info  |  DynLibManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_DynLibManager.cpp  |  30
+06:50:07  |  Core  |  Info  |  * Initialise: PluginManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PluginManager.cpp  |  30
+06:50:07  |  Core  |  Info  |  PluginManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PluginManager.cpp  |  34
+06:50:07  |  Core  |  Info  |  * Initialise: LanguageManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LanguageManager.cpp  |  30
+06:50:07  |  Core  |  Info  |  LanguageManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LanguageManager.cpp  |  34
+06:50:07  |  Core  |  Info  |  * Initialise: FactoryManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FactoryManager.cpp  |  25
+06:50:07  |  Core  |  Info  |  FactoryManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FactoryManager.cpp  |  27
+06:50:07  |  Core  |  Info  |  * Initialise: ToolTipManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ToolTipManager.cpp  |  33
+06:50:07  |  Core  |  Info  |  ToolTipManager successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ToolTipManager.cpp  |  45
+06:50:07  |  Core  |  Info  |  Gui successfully initialized  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_Gui.cpp  |  111
+06:50:07  |  Core  |  Info  |  Load ini file 'skins.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'core.skin'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_resources.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_font.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'MonoFont' using texture size 512 x 1024.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'MonoFont' using real height 51 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook MonoFont' using texture size 1024 x 1024.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook MonoFont' using real height 69 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_text.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_windows.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_button.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_list.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_edit.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_box.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_progress.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_hud_energybar.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_hud_box.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_mainmenu.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_console.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_journal.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_map_window.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_dialogue_window.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_scroll.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_debug_window.skin.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_layers.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_pointer.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Info  |  Load ini file 'openmw_settings.xml'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  114
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'Magic Cards'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Magic Cards' using texture size 512 x 512.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Magic Cards' using real height 44 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'Daedric'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Daedric' using texture size 256 x 256.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Daedric' using real height 45 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'MonoFont'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'MonoFont' using texture size 512 x 1024.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'MonoFont' using real height 51 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'Journalbook Magic Cards'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook Magic Cards' using texture size 512 x 1024.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook Magic Cards' using real height 60 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'Journalbook Daedric'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook Daedric' using texture size 256 x 512.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook Daedric' using real height 62 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+06:50:07  |  Core  |  Warning  |  duplicate resource name 'Journalbook MonoFont'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  92
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook MonoFont' using texture size 1024 x 1024.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  769
+06:50:07  |  Core  |  Info  |  ResourceTrueTypeFont: Font 'Journalbook MonoFont' using real height 69 pixels.  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceTrueTypeFont.cpp  |  770
+07:13:13  |  Core  |  Info  |  * Shutdown: Gui  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_Gui.cpp  |  125
+07:13:13  |  Core  |  Info  |  * Shutdown: PointerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PointerManager.cpp  |  69
+07:13:13  |  Core  |  Info  |  PointerManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PointerManager.cpp  |  86
+07:13:13  |  Core  |  Info  |  * Shutdown: InputManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_InputManager.cpp  |  73
+07:13:13  |  Core  |  Info  |  InputManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_InputManager.cpp  |  78
+07:13:13  |  Core  |  Info  |  * Shutdown: SkinManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SkinManager.cpp  |  53
+07:13:13  |  Core  |  Info  |  SkinManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SkinManager.cpp  |  60
+07:13:13  |  Core  |  Info  |  * Shutdown: SubWidgetManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SubWidgetManager.cpp  |  63
+07:13:13  |  Core  |  Info  |  SubWidgetManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_SubWidgetManager.cpp  |  83
+07:13:13  |  Core  |  Info  |  * Shutdown: LayerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  48
+07:13:13  |  Core  |  Info  |  destroy layer 'Scene'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Overlay'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'AdditiveOverlay'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'HUD'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Menu'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'MainMenu'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'JournalBooks'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Windows'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Debug'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Popup'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Notification'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'DragAndDrop'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'LoadingScreen'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'MessageBox'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'InputBlocker'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  destroy layer 'Pointer'  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  191
+07:13:13  |  Core  |  Info  |  LayerManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayerManager.cpp  |  59
+07:13:13  |  Core  |  Info  |  * Shutdown: FontManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FontManager.cpp  |  49
+07:13:13  |  Core  |  Info  |  FontManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FontManager.cpp  |  57
+07:13:13  |  Core  |  Info  |  * Shutdown: ControllerManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ControllerManager.cpp  |  49
+07:13:13  |  Core  |  Info  |  ControllerManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ControllerManager.cpp  |  59
+07:13:13  |  Core  |  Info  |  * Shutdown: ClipboardManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ClipboardManager.cpp  |  46
+07:13:13  |  Core  |  Info  |  ClipboardManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ClipboardManager.cpp  |  54
+07:13:13  |  Core  |  Info  |  * Shutdown: LayoutManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayoutManager.cpp  |  42
+07:13:13  |  Core  |  Info  |  LayoutManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LayoutManager.cpp  |  49
+07:13:13  |  Core  |  Info  |  * Shutdown: PluginManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PluginManager.cpp  |  41
+07:13:13  |  Core  |  Info  |  PluginManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_PluginManager.cpp  |  46
+07:13:13  |  Core  |  Info  |  * Shutdown: DynLibManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_DynLibManager.cpp  |  37
+07:13:13  |  Core  |  Info  |  DynLibManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_DynLibManager.cpp  |  44
+07:13:13  |  Core  |  Info  |  * Shutdown: LanguageManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LanguageManager.cpp  |  41
+07:13:13  |  Core  |  Info  |  LanguageManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_LanguageManager.cpp  |  45
+07:13:13  |  Core  |  Info  |  * Shutdown: ResourceManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  47
+07:13:13  |  Core  |  Info  |  ResourceManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ResourceManager.cpp  |  57
+07:13:13  |  Core  |  Info  |  * Shutdown: FactoryManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FactoryManager.cpp  |  34
+07:13:13  |  Core  |  Info  |  FactoryManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_FactoryManager.cpp  |  36
+07:13:13  |  Core  |  Info  |  * Shutdown: ToolTipManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ToolTipManager.cpp  |  52
+07:13:13  |  Core  |  Info  |  ToolTipManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_ToolTipManager.cpp  |  57
+07:13:13  |  Core  |  Info  |  * Shutdown: WidgetManager  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_WidgetManager.cpp  |  91
+07:13:13  |  Core  |  Info  |  WidgetManager successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_WidgetManager.cpp  |  100
+07:13:13  |  Core  |  Info  |  Gui successfully shutdown  |  /builddir/build/BUILD/mygui-8a05127d7c5bb6772df88185b1f99d8052c379a4/MyGUIEngine/src/MyGUI_Gui.cpp  |  171
+07:13:13  |  Platform  |  Info  |  * Shutdown: RenderManager  |  /home/legion/Projects/src/openmw/components/myguiplatform/myguirendermanager.cpp  |  368
+07:13:13  |  Platform  |  Info  |  RenderManager successfully shutdown  |  /home/legion/Projects/src/openmw/components/myguiplatform/myguirendermanager.cpp  |  378

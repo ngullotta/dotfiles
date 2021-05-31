@@ -1,4 +1,4 @@
-Crash handler installed
-Loading settings file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/openmw-cs.cfg
-Loading config file: /home/legion/Projects/src/openmw/build/openmw-0.46.0-Linux-64Bit/openmw.cfg
-Loading config file: /home/legion/.config/openmw/openmw.cfg
+[07:33:19.061 I] Crash handler installed
+[07:33:19.178 I] Loading settings file: /usr/local/etc/openmw/openmw-cs.cfg
+[07:33:19.214 I] Loading config file: /home/legion/.config/openmw/openmw.cfg
+[07:33:19.215 I] Loading config file: /usr/local/etc/openmw/openmw.cfg
