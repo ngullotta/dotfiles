@@ -84,7 +84,7 @@ if [ -n "${+terminfo[smkx]}" ] && [ -n "${+terminfo[rmkx]}" ]; then
 fi
 
 # -----------------------------------------------------------------------------
-PATH="$PATH:$HOME/.local/bin"
+PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/newsboat"
 
 setopt +o nomatch
 
