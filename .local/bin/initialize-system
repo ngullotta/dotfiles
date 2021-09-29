@@ -16,8 +16,11 @@ if ! which ansible-galaxy > /dev/null 2>&1; then
   exit 1
 fi
 
+config() {
+    git --git-dir="$HOME/.cfg/" --work-tree="$HOME" "$@"
+}
+
 init() {
-    alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
     if ! [ -d  "$HOME/.cfg" ]; then
         echo "Pulling down dotfiles..."
         mkdir -p "$HOME/.cfg"
