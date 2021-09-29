@@ -22,24 +22,17 @@ config() {
 
 init() {
     if ! [ -d  "$HOME/.cfg" ]; then
-        echo "Pulling down dotfiles..."
+        echo "Pulling down repository..."
         mkdir -p "$HOME/.cfg"
 
         # Non-SSH because we don't have keys set up yet...
         git clone --bare \
             "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
-
-        # Rebase is my preferred strategy
-        config config pull.rebase true
-
-        config checkout master \
-            && config submodule update --init --recursive --remote
     fi
 
     if [ -d  "$HOME/.cfg" ]; then
         config config pull.rebase true
-        # This is essentially the same step as earlier, just here incase
-        # this is rerun at a later date or things are in a weird state
+        
         config checkout master \
             && config pull \
             && config submodule update --init --recursive --remote
