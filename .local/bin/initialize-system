@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 set -m
 if ! which git > /dev/null 2>&1; then
   echo "Please install git!"
@@ -11,12 +12,7 @@ if ! which ansible > /dev/null 2>&1; then
 fi
 
 if ! which ansible-galaxy > /dev/null 2>&1; then
-  echo "Please install ansible!"
-  exit 1
-fi
-
-if ! which ansible-galaxy > /dev/null 2>&1; then
-  echo "Please install ansible!"
+  echo "Please install ansible-galaxy!"
   exit 1
 fi
 
@@ -30,14 +26,16 @@ init() {
         git clone --bare \
             "https://github.com/legionxvx/dotfiles.git" "$HOME/.cfg"
 
+        # Rebase is my preferred strategy
         config config pull.rebase true
+
         config checkout master \
             && config submodule update --init --recursive --remote
     fi
 
     if [ -d  "$HOME/.cfg" ]; then
         config config pull.rebase true
-        # This is essentially the same step as earlier, just here incase 
+        # This is essentially the same step as earlier, just here incase
         # this is rerun at a later date or things are in a weird state
         config checkout master \
             && config pull \
@@ -73,14 +71,14 @@ init() {
 
     if [ -d "$HOME/.local/ansible-config" ]; then
         ansible-galaxy collection install community.general
-        cd "$HOME/.local/ansible-config" || exit 1
+        pushd "$HOME/.local/ansible-config" || exit 1
         if [ "$dry" = "1" ]; then
             echo "Dry run"
             sudo make dry-run
             exit
         fi
         sudo make dry-run && sudo make run
-        cd || exit 1
+        popd || exit 1
     fi
 }
 
