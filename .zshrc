@@ -12,7 +12,6 @@ git_current_branch() {
 
 # @ToDo -> Make this prettier!
 # shellcheck disable=SC2016
-export PROMPT='%F{green}%n%f@%F{magenta}%m%f %F{white}$(git_current_branch)%F{blue}%B%~%b%f %# '
 
 # History
 export HISTSIZE=10000
@@ -94,7 +93,11 @@ for plugin in "$plugins"/*; do
   if [ -e "$plugin" ]; then
     name="$(basename "$plugin")"
     # shellcheck source=/dev/null
-    source "$plugin"/"$name"*.zsh
+    if [ "$(echo $plugin/$name*.zsh)" != "$plugin/$name*.zsh" ]; then
+      source "$plugin"/"$name"*.zsh
+    else
+      source "$plugin"/*.zsh
+    fi
   fi
 done
 
@@ -106,5 +109,6 @@ for script in "$scripts"/*; do
 done
 
 alias config='git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
 # Allows auto-complete even through alias
 setopt complete_aliases
