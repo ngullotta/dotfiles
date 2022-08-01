@@ -13,3 +13,6 @@
 [submodule ".local/share/zsh/plugins/zsh-shift-select"]
 	path = .local/share/zsh/plugins/zsh-shift-select
 	url = https://github.com/jirutka/zsh-shift-select.git
+[submodule ".local/share/zsh/plugin/spaceship-prompt"]
+	path = .local/share/zsh/plugin/spaceship-prompt
+	url = https://github.com/spaceship-prompt/spaceship-prompt.git
