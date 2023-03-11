@@ -60,7 +60,7 @@ TARGETS= \
 # Source files for our symlinks
 # ${DESTDIR}/.emacs.d: ${srcdir}/emacs
 # ${DESTDIR}/.bash_profile: ${srcdir}/bash.d/profile ${srcdir}/bash.d/bash-git-prompt
-# ${DESTDIR}/.gitconfig: ${srcdir}/gitconf/config
+${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
 # ${DESTDIR}/bin/git-pretty-history: ${srcdir}/gitconf/git-pretty-history
 # ${DESTDIR}/bin/power_menu: ${srcdir}/bin/power_menu
 # ${DESTDIR}/.Xdefaults: ${srcdir}/x/defaults
