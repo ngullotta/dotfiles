@@ -4,9 +4,6 @@
 [submodule ".local/share/zsh/plugins/zsh-syntax-highlighting"]
 	path = .local/share/zsh/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule ".local/ansible-config"]
-	path = .local/ansible-config
-	url = https://github.com/legionxvx/ansible-config
 [submodule ".local/share/zsh/plugins/spaceship-prompt"]
 	path = .local/share/zsh/plugins/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
