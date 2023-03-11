@@ -18,6 +18,9 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE="$HOME/.cache/zsh/history"
 
+[ -f "$HISTFILE" ] || mkdir -p "$(dirname $HISTFILE)"
+[ -f "$HISTFILE" ] || touch "$HISTFILE"
+
 # Basic auto/tab complete
 autoload -U compinit
 zstyle ':completion:*' menu select
