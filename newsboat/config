@@ -3,7 +3,6 @@ external-url-viewer "urlscan -dc -r 'linkhandler {}'"
 max-items 0
 #feed-sort-order firsttag
 
-browser "setsid nohup linkhandler"
 macro , open-in-browser
 macro m set browser "mpv %u"; open-in-browser ; set browser linkhandler
 macro i set pager "/home/muto/.local/bin/newsboat/kitty-img-pager"; open; set pager internal
