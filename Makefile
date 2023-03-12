@@ -34,7 +34,16 @@ COMMON_ARCH.aarch64 = arm64
 TARGETS= \
 	${DESTDIR}/.gitconfig \
 	${DESTDIR}/.config/kitty/kitty.conf \
+	${DESTDIR}/.config/mpv \
+	${DESTDIR}/.config/nano \
+	${DESTDIR}/.config/newsboat \
+	${DESTDIR}/.config/polybar \
+	${DESTDIR}/.config/sxhkd \
 	${DESTDIR}/.local/share/zsh \
+	${DESTDIR}/.local/share/scripts \
+	${DESTDIR}/.local/bin/newsboat \
+	${DESTDIR}/.local/bin/strainer \
+	${DESTDIR}/.local/bin/twitch \
 	${DESTDIR}/.zshrc
 
 .PHONY: all install uninstall init deinit targets
@@ -42,7 +51,16 @@ TARGETS= \
 # Source files for our symlinks
 ${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
 ${DESTDIR}/.config/kitty/kitty.conf: ${srcdir}/kitty/kitty.conf
+${DESTDIR}/.config/mpv: ${srcdir}/mpv
+${DESTDIR}/.config/nano: ${srcdir}/nano
+${DESTDIR}/.config/newsboat: ${srcdir}/newsboat
+${DESTDIR}/.config/polybar: ${srcdir}/polybar
+${DESTDIR}/.config/sxhkd: ${srcdir}/sxhkd
 ${DESTDIR}/.local/share/zsh: ${srcdir}/.local/share/zsh
+${DESTDIR}/.local/share/scripts: ${srcdir}/.local/share/scripts
+${DESTDIR}/.local/bin/newsboat: ${srcdir}/.local/bin/newsboat
+${DESTDIR}/.local/bin/strainer: ${srcdir}/.local/bin/strainer
+${DESTDIR}/.local/bin/twitch: ${srcdir}/.local/bin/twitch
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
 
 
