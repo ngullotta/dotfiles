@@ -1,9 +1,0 @@
-#!/bin/sh
-img="$(
-    curl --silent $1 \
-        | grep "Image URL.*" \
-        | grep -o "https.*"
-)"
-[ -n "$img" ] || exit
-kitty +kitten icat --scale-up --hold "$img"
-clear
