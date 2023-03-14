@@ -17,6 +17,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw you
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYsGgfAcQ91Fpda3_O-h0LA youtube # Clint Stevens
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2rzsm1Qi6N1X-wuOg_p0Ng youtube # Project Farm
 https://www.youtube.com/feeds/videos.xml?channel_id=UChrYe70o7NmDioL02PRVWVg youtube # MattKC
+https://www.youtube.com/feeds/videos.xml?channel_id=UCs-w7E2HZWwXmjt9RTvBB_A youtube # Settled
 
 " "
 "=== Twitch ==="
@@ -28,6 +29,7 @@ https://twitchrss.appspot.com/vodonly/clintstevens twitch
 https://feeds.npr.org/1001/rss.xml news
 https://www.phoronix.com/rss.php news science linux
 https://kotaku.com/rss news gaming
+https://hnrss.org/frontpage news tech
 
 " "
 "=== Finance ==="
