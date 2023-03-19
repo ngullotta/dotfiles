@@ -1,0 +1,47 @@
+#!/usr/bin/env python
+from urllib.request import urlopen
+from urllib.parse import urlparse
+from argparse import ArgumentParser
+from pathlib import Path
+from re import findall, IGNORECASE
+
+parser = ArgumentParser()
+parser.add_argument("uri", type=str)
+
+def parse_body_image_urls(
+    body, pattern=r"[\"|\'|https?].*\.(?i:jpe?g|gif|png|bmp)[\"|\']?"
+):
+    rv = []
+    for match in findall(pattern, body, IGNORECASE):
+        for unwanted in ["href=" , "src=", "'" , '"']:
+            match = match.replace(unwanted, "")
+            match = match.replace(unwanted.upper(), "")
+            match = match.replace(unwanted.lower(), "")
+        rv.append(match)
+    return rv
+
+if __name__ == "__main__":
+    args = parser.parse_args()
+    url = urlparse(args.uri)
+
+    # This is a local path, or at least we will parse it as such
+    if url.scheme in ["file", ""]:
+        path = Path(url.path)
+        if not path.exists():
+            print("Could not locate local resource along %s", path)
+            exit(1)
+        with open(path) as fp:
+            images = parse_body_image_urls(fp.read())
+            for image in images:
+                print(image)
+
+    # This is a URL of some kind
+    if url.scheme in ["http", "https"]:
+        with urlopen(args.uri) as f:
+            body = f.read().decode("utf-8")
+            images = parse_body_image_urls(body)
+            for image in images:
+                # Relative image
+                if not image.lower().startswith("http"):
+                    image = url._replace(path=image).geturl()
+                print(image)

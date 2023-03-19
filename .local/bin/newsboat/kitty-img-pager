@@ -13,50 +13,15 @@ set -o pipefail
 set -o nounset
 
 dims="$(tput cols)x$(tput lines)@0x0"
+get_window_dims() {
+    dims="$(tput cols)x$(tput lines)@0x0"
+}
 
-regex='(https?|ftp|file)://[-[:alnum:]\+&@#/%?=~_|!:,.;]*[-[:alnum:]\+&@#/%=~_|]'
-if [[ "$1" =~ $regex ]]; then
-    # This is a link
-    baseurl=$(echo "$1" | grep -oP "http.://\K[^']+/")
-    for link in $(
-        curl "$1" --silent \
-            | grep -iPo '<img[^>]*src="\K[^"]*(?=")'
-        )
-    do
-        if ! [[ "$link" == http* ]]; then
-            link="http://$baseurl/$link"
-        fi
-        clear
-        kitty +kitten icat --clear
-        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
-        clear
-    done
-else
-    # This is most likely a file
-    for link in $(
-        cat $1 \
-            | grep -iPo '<img[^>]*src="\K[^"]*(?=")'
-        )
-    do
-        if ! [[ "$link" == http* ]]; then
-            link="http://$baseurl/$link"
-        fi
-        clear
-        kitty +kitten icat --clear
-        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
-        clear
-    done
+trap get_window_dims SIGWINCH
 
-    for link in $(
-        cat "$1" \
-            | grep -oE '(http|https)://(.*).(jpg|jpeg|png)' $1
-        )
-    do
-        clear
-        kitty +kitten icat --clear
-        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
-        clear
-    done
-fi
-
-# cat "$1" > /tmp/article
+while IFS= read -r link; do
+    clear
+    kitty +kitten icat --clear
+    kitty +kitten icat --hold --scale-up --place "$dims" "$link"
+    clear
+done <<< "$(image-link-scraper $1)"
