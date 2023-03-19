@@ -8,18 +8,55 @@
 #    macro i set pager "$PATHTOTHIS/kitty-img-pager"; open; set pager internal
 # 2) Now you use this pager in articleview using the hotkey <comma>+<i>
 
-set -o errexit
-set -o pipefail
-set -o nounset
+# set -o errexit
+# set -o pipefail
+# set -o nounset
 
-image="$1"
-# This is a file (like from newsboat)
-[ -f "$1" ] && image="$(grep -E -o "https?://[a-zA-Z0-9./?=_%:-]*" < "$1" | tail -1)"
-
-# Detect terminal dimensions
 dims="$(tput cols)x$(tput lines)@0x0"
 
-clear
-kitty +kitten icat --clear
-kitty +kitten icat --hold --scale-up --place "$dims" "$image"
-clear
+regex='(https?|ftp|file)://[-[:alnum:]\+&@#/%?=~_|!:,.;]*[-[:alnum:]\+&@#/%=~_|]'
+if [[ "$1" =~ $regex ]]; then
+    # This is a link
+    baseurl=$(echo "$1" | grep -oP "http.://\K[^']+/")
+    for link in $(
+        curl "$1" --silent \
+            | grep -iPo '<img[^>]*src="\K[^"]*(?=")'
+        )
+    do
+        if ! [[ "$link" == http* ]]; then
+            link="http://$baseurl/$link"
+        fi
+        clear
+        kitty +kitten icat --clear
+        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
+        clear
+    done
+else
+    # This is most likely a file
+    for link in $(
+        cat $1 \
+            | grep -iPo '<img[^>]*src="\K[^"]*(?=")'
+        )
+    do
+        if ! [[ "$link" == http* ]]; then
+            link="http://$baseurl/$link"
+        fi
+        clear
+        kitty +kitten icat --clear
+        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
+        clear
+    done
+
+    for link in $(
+        cat "$1" \
+            | grep -oE '(http|https)://(.*).(jpg|jpeg|png)' $1
+        )
+    do
+        clear
+        kitty +kitten icat --clear
+        kitty +kitten icat --hold --scale-up --place "$dims" "$link"
+        clear
+    done
+fi
+
+# cat "$1" > /tmp/article

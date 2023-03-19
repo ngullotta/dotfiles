@@ -5,6 +5,7 @@ max-items 0
 
 macro , open-in-browser
 macro m set browser "mpv %u"; open-in-browser ; set browser linkhandler
+macro v set browser "kitty-img-pager %u"; open-in-browser ; set browser linkhandler
 macro i set pager "/home/muto/.local/bin/newsboat/kitty-img-pager"; open; set pager internal
 
 highlight all "---.*---" yellow
