@@ -8,9 +8,9 @@
 #    macro i set pager "$PATHTOTHIS/kitty-img-pager"; open; set pager internal
 # 2) Now you use this pager in articleview using the hotkey <comma>+<i>
 
-# set -o errexit
-# set -o pipefail
-# set -o nounset
+set -o errexit
+set -o pipefail
+set -o nounset
 
 dims="$(tput cols)x$(tput lines)@0x0"
 
