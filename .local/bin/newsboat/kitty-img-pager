@@ -13,15 +13,18 @@ set -o pipefail
 set -o nounset
 
 dims="$(tput cols)x$(tput lines)@0x0"
-get_window_dims() {
-    dims="$(tput cols)x$(tput lines)@0x0"
-}
 
-trap get_window_dims SIGWINCH
+declare -a images
 
-while IFS= read -r link; do
-    clear
-    kitty +kitten icat --clear
-    kitty +kitten icat --hold --scale-up --place "$dims" "$link"
-    clear
+# This has to be done due to readbuf weirdness. Tried it like a million
+# times with `while read -r line ...` But it never seemed to work until
+# I stashed the output into an array and read from it instead.
+while read -r line; do
+    [ -z "$line" ] && break
+    images+=("$line")            
 done <<< "$(image-link-scraper $1)"
+
+for link in "${images[@]}"; do
+    clear && kitty +kitten icat --clear
+    kitty +kitten icat --hold --scale-up --place "$dims" "$link" && clear
+done

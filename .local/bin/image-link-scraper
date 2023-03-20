@@ -4,20 +4,21 @@ from urllib.parse import urlparse
 from argparse import ArgumentParser
 from pathlib import Path
 from re import findall, IGNORECASE
+from enum import Enum
+
+class RegexPattern(Enum):
+    ENCLOSED = r"<img\s+[^>]*src=\"([^\"]*)\"[^>]*>"
+    BARE = r"https?://\S+\.(?:jpe?g|png|gif)"
 
 parser = ArgumentParser()
 parser.add_argument("uri", type=str)
 
-def parse_body_image_urls(
-    body, pattern=r"[\"|\'|https?].*\.(?i:jpe?g|gif|png|bmp)[\"|\']?"
-):
+# https://xkcd.com/2751/ (doesn't work, fixme)
+
+def parse_body_image_urls(body, patterns=[RegexPattern.ENCLOSED.value], flags=IGNORECASE):
     rv = []
-    for match in findall(pattern, body, IGNORECASE):
-        for unwanted in ["href=" , "src=", "'" , '"']:
-            match = match.replace(unwanted, "")
-            match = match.replace(unwanted.upper(), "")
-            match = match.replace(unwanted.lower(), "")
-        rv.append(match)
+    for pattern in patterns:
+        rv.extend(findall(pattern, body, flags))
     return rv
 
 if __name__ == "__main__":
@@ -41,7 +42,12 @@ if __name__ == "__main__":
             body = f.read().decode("utf-8")
             images = parse_body_image_urls(body)
             for image in images:
+                if image[0:2] == "//":
+                    image = image[2:]
+                if '//' not in image:
+                    image = "https://" + image
                 # Relative image
-                if not image.lower().startswith("http"):
-                    image = url._replace(path=image).geturl()
-                print(image)
+                img_url = urlparse(image)
+                if img_url.path != "" and img_url.netloc == "":
+                    img_url = img_url._replace(netloc=url.netloc)
+                print(img_url.geturl())
