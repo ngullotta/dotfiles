@@ -17,6 +17,9 @@ parser = ArgumentParser(
     description="""
     Get all image urls from a URI. This can either be a link to a 
     webpage or a local path. This uses only standard python builtins.
+
+    When scraped images are relative it will attempt to re-attach it to
+    the base url netloc (when given webpage links)
     """
 )
 parser.add_argument(
