@@ -40,8 +40,9 @@ if __name__ == "__main__":
             exit(1)
         with open(path) as fp:
             images = parse_body_image_urls(fp.read())
-            for image in images:
-                print(image)
+            for image in map(lambda s: urlparse(s), images):
+                logging.debug(image)
+                print(image.geturl())
 
     # This is a URL of some kind
     if base.scheme in ["http", "https"]:
