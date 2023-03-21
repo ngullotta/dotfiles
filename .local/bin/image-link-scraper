@@ -5,31 +5,38 @@ from argparse import ArgumentParser
 from pathlib import Path
 from re import findall, IGNORECASE
 from enum import Enum
+import logging
+
 
 class RegexPattern(Enum):
     ENCLOSED = r"<img\s+[^>]*src=\"([^\"]*)\"[^>]*>"
     BARE = r"https?://\S+\.(?:jpe?g|png|gif)"
 
+
 parser = ArgumentParser()
 parser.add_argument("uri", type=str)
+parser.add_argument("-l", "--level", type=logging.getLogger().setLevel)
 
-# https://xkcd.com/2751/ (doesn't work, fixme)
 
-def parse_body_image_urls(body, patterns=[RegexPattern.ENCLOSED.value], flags=IGNORECASE):
+def parse_body_image_urls(
+    body, patterns=[RegexPattern.ENCLOSED.value], flags=IGNORECASE
+):
     rv = []
     for pattern in patterns:
         rv.extend(findall(pattern, body, flags))
     return rv
 
+
 if __name__ == "__main__":
     args = parser.parse_args()
-    url = urlparse(args.uri)
+    base = urlparse(args.uri)
+    logging.debug(base)
 
     # This is a local path, or at least we will parse it as such
-    if url.scheme in ["file", ""]:
+    if base.scheme in ["file", ""]:
         path = Path(url.path)
         if not path.exists():
-            print("Could not locate local resource along %s", path)
+            logging.error("Could not locate local resource along %s", path)
             exit(1)
         with open(path) as fp:
             images = parse_body_image_urls(fp.read())
@@ -37,17 +44,14 @@ if __name__ == "__main__":
                 print(image)
 
     # This is a URL of some kind
-    if url.scheme in ["http", "https"]:
+    if base.scheme in ["http", "https"]:
         with urlopen(args.uri) as f:
             body = f.read().decode("utf-8")
             images = parse_body_image_urls(body)
-            for image in images:
-                if image[0:2] == "//":
-                    image = image[2:]
-                if '//' not in image:
-                    image = "https://" + image
-                # Relative image
-                img_url = urlparse(image)
-                if img_url.path != "" and img_url.netloc == "":
-                    img_url = img_url._replace(netloc=url.netloc)
-                print(img_url.geturl())
+            for image in map(lambda s: urlparse(s), images):
+                logging.debug(image)
+                if not image.netloc:
+                    image = image._replace(netloc=base.netloc)
+                if not image.scheme:
+                    image = image._replace(scheme=base.scheme)
+                print(image.geturl())
