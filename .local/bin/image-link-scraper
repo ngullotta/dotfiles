@@ -3,7 +3,7 @@ import logging
 from argparse import ArgumentParser
 from enum import Enum
 from pathlib import Path
-from re import IGNORECASE, findall, DOTALL
+from re import IGNORECASE, findall, DOTALL, RegexFlag
 from urllib.parse import urlparse
 from urllib.request import urlopen
 
@@ -38,7 +38,7 @@ parser.add_argument(
 def parse_body_image_urls(
     body: str,
     pattern: RegexPattern = RegexPattern.ENCLOSED,
-    flags=(IGNORECASE | DOTALL),
+    flags: RegexFlag = (IGNORECASE | DOTALL),
 ):
     return findall(pattern.value, body, flags)
 
