@@ -45,6 +45,7 @@ TARGETS= \
 	${DESTDIR}/.local/bin/strainer \
 	${DESTDIR}/.local/bin/twitch \
 	${DESTDIR}/.local/bin/image-link-scraper \
+	${DESTDIR}/.local/bin/linkhandler \
 	${DESTDIR}/.zshrc
 
 .PHONY: all install uninstall init deinit targets
@@ -63,6 +64,7 @@ ${DESTDIR}/.local/bin/newsboat: ${srcdir}/.local/bin/newsboat
 ${DESTDIR}/.local/bin/strainer: ${srcdir}/.local/bin/strainer
 ${DESTDIR}/.local/bin/twitch: ${srcdir}/.local/bin/twitch
 ${DESTDIR}/.local/bin/image-link-scraper: ${srcdir}/.local/bin/image-link-scraper
+${DESTDIR}/.local/bin/linkhandler: ${srcdir}/.local/bin/linkhandler
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
 
 
