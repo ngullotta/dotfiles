@@ -104,8 +104,8 @@ _default_args="
     --twitch-disable-hosting \
     --twitch-disable-reruns \
     --player-passthrough=hls \
-    --hls-segment-threads 5
+    --hls-segment-threads 5 \
 "
 args="$_default_args $_non_default_args"
 
-$_base_cmd $args
+setsid $_base_cmd $args --player="setsid" --player-args="-f ${PLAYER:-mpv}"
