@@ -27,7 +27,7 @@ uname_m = $(shell uname -m)
 COMMON_ARCH.x86_64 = amd64
 COMMON_ARCH.aarch64 = arm64
 
-# clear out suffixes; we don't need them anyway
+# Clear out suffixes, we don't need them anyway
 .SUFFIXES:
 
 # Locations of symlinks.  Their source files are below
@@ -48,7 +48,10 @@ TARGETS= \
 	${DESTDIR}/.local/bin/linkhandler \
 	${DESTDIR}/.zshrc
 
-.PHONY: all install uninstall init deinit targets
+# Our package install script
+PACKAGE_SCRIPT = install-packages.sh
+
+.PHONY: all install uninstall init deinit targets packages
 
 # Source files for our symlinks
 ${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
@@ -80,7 +83,11 @@ deinit:
 
 targets: $(TARGETS)
 
-install: init targets
+packages:
+	@chmod +x $(PACKAGE_SCRIPT)
+	@./$(PACKAGE_SCRIPT)
+
+install: init targets packages
 
 uninstall:
 	rm $(TARGETS) > /dev/null 2>&1 || true

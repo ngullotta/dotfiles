@@ -6,5 +6,5 @@
 [alias]
 	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";};f"
 	count = "!f(){ git rev-list --count --no-merges ${1}..;};f"
-	cleanup = "!f(){ git branch -D `git branch | grep -vE \"(master|main|test|develop|dev|uat|staging|stage|$(git branch --show-current))\" | xargs`;};f"
+	cleanup = "!f(){ git branch -D `git branch | grep -vE \"(main|develop|$(git branch --show-current))\" | xargs`;};f"
 	push-origin = "!f(){ git push -u origin $(git branch --show-current);};f"

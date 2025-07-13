@@ -1,15 +1,6 @@
 [submodule ".local/share/zsh/plugins/zsh-z"]
 	path = .local/share/zsh/plugins/zsh-z
 	url = https://github.com/agkozak/zsh-z.git
-[submodule ".local/share/zsh/plugins/zsh-syntax-highlighting"]
-	path = .local/share/zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule ".local/share/zsh/plugins/spaceship-prompt"]
-	path = .local/share/zsh/plugins/spaceship-prompt
-	url = https://github.com/spaceship-prompt/spaceship-prompt.git
-[submodule ".local/share/zsh/plugins/zsh-shift-select"]
-	path = .local/share/zsh/plugins/zsh-shift-select
-	url = https://github.com/jirutka/zsh-shift-select.git
-[submodule ".local/share/zsh/plugin/spaceship-prompt"]
 	path = .local/share/zsh/plugins/spaceship-prompt
 	url = https://github.com/spaceship-prompt/spaceship-prompt.git
