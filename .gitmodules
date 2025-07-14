@@ -1,6 +1,3 @@
 [submodule ".local/share/zsh/plugins/zsh-z"]
 	path = .local/share/zsh/plugins/zsh-z
 	url = https://github.com/agkozak/zsh-z.git
-[submodule ".local/share/zsh/plugins/spaceship-prompt"]
-	path = .local/share/zsh/plugins/spaceship-prompt
-	url = https://github.com/spaceship-prompt/spaceship-prompt.git
