@@ -195,3 +195,6 @@ zle -N x-yank
 bindkey -e '\ew' x-copy-region-as-kill
 bindkey -e '^W' x-kill-region
 bindkey -e '^Y' x-yank
+
+
+export EDITOR="nvim"

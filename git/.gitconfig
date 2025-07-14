@@ -1,10 +1,22 @@
 [user]
-	name = ngullotta
-	email = nikolaus.gullotta@protonmail.com
+    name = ngullotta
+    email = nikolaus.gullotta@protonmail.com
 [pull]
-	rebase = true
+    rebase = true
 [alias]
-	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";};f"
-	count = "!f(){ git rev-list --count --no-merges ${1}..;};f"
-	cleanup = "!f(){ git branch -D `git branch | grep -vE \"(main|develop|$(git branch --show-current))\" | xargs`;};f"
-	push-origin = "!f(){ git push -u origin $(git branch --show-current);};f"
+    squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\";};f"
+    count = "!f(){ git rev-list --count --no-merges ${1}..;};f"
+    cleanup = "!f(){ git branch -D `git branch | grep -vE \"(main|develop|$(git branch --show-current))\" | xargs`;};f"
+    push-origin = "!f(){ git push -u origin $(git branch --show-current);};f"
+[color]
+    ui = auto
+[color "status"]
+    branch = green
+[diff]
+    tool = kitty
+    guitool = kitty.gui
+    trustExitCode = true
+[difftool "kitty"]
+    cmd = kitty +kitten diff $LOCAL $REMOTE
+[difftool "kitty.gui"]
+    cmd = kitty --start-as=fullscreen kitty +kitten diff $LOCAL $REMOTE

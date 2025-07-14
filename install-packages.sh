@@ -11,7 +11,7 @@ detect_pm() {
     elif command -v brew >/dev/null 2>&1; then
         echo "brew"
     else
-        echo "unknown"
+        echo "unknown"p
     fi
 }
 
@@ -50,6 +50,7 @@ get_package_name() {
     generic_name="$1"
     pm="$2"
     
+    # https://repology.org/projects/ (<-- helper)
     # Package mappings - format: generic:pacman:dnf:apt:brew
     case "$generic_name" in
         editor) mapping="editor:vim:vim:vim:vim" ;;

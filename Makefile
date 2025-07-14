@@ -35,17 +35,10 @@ TARGETS= \
 	${DESTDIR}/.gitconfig \
 	${DESTDIR}/.config/kitty/kitty.conf \
 	${DESTDIR}/.config/mpv \
-	${DESTDIR}/.config/nano \
 	${DESTDIR}/.config/newsboat \
-	${DESTDIR}/.config/polybar \
-	${DESTDIR}/.config/sxhkd \
 	${DESTDIR}/.local/share/zsh \
 	${DESTDIR}/.local/share/scripts \
 	${DESTDIR}/.local/bin/newsboat \
-	${DESTDIR}/.local/bin/strainer \
-	${DESTDIR}/.local/bin/twitch \
-	${DESTDIR}/.local/bin/image-link-scraper \
-	${DESTDIR}/.local/bin/linkhandler \
 	${DESTDIR}/.zshrc
 
 # Our package install script
@@ -57,17 +50,10 @@ PACKAGE_SCRIPT = install-packages.sh
 ${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
 ${DESTDIR}/.config/kitty/kitty.conf: ${srcdir}/kitty/kitty.conf
 ${DESTDIR}/.config/mpv: ${srcdir}/mpv
-${DESTDIR}/.config/nano: ${srcdir}/nano
 ${DESTDIR}/.config/newsboat: ${srcdir}/newsboat
-${DESTDIR}/.config/polybar: ${srcdir}/polybar
-${DESTDIR}/.config/sxhkd: ${srcdir}/sxhkd
 ${DESTDIR}/.local/share/zsh: ${srcdir}/.local/share/zsh
 ${DESTDIR}/.local/share/scripts: ${srcdir}/.local/share/scripts
 ${DESTDIR}/.local/bin/newsboat: ${srcdir}/.local/bin/newsboat
-${DESTDIR}/.local/bin/strainer: ${srcdir}/.local/bin/strainer
-${DESTDIR}/.local/bin/twitch: ${srcdir}/.local/bin/twitch
-${DESTDIR}/.local/bin/image-link-scraper: ${srcdir}/.local/bin/image-link-scraper
-${DESTDIR}/.local/bin/linkhandler: ${srcdir}/.local/bin/linkhandler
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
 
 
@@ -87,7 +73,7 @@ packages:
 	@chmod +x $(PACKAGE_SCRIPT)
 	@./$(PACKAGE_SCRIPT)
 
-install: init targets packages
+install: init targets
 
 uninstall:
 	rm $(TARGETS) > /dev/null 2>&1 || true
