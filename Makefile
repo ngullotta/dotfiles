@@ -33,12 +33,10 @@ COMMON_ARCH.aarch64 = arm64
 # Locations of symlinks.  Their source files are below
 TARGETS= \
 	${DESTDIR}/.gitconfig \
-	${DESTDIR}/.config/kitty/kitty.conf \
+	${DESTDIR}/.config/kitty \
 	${DESTDIR}/.config/mpv \
 	${DESTDIR}/.config/newsboat \
 	${DESTDIR}/.local/share/zsh \
-	${DESTDIR}/.local/share/scripts \
-	${DESTDIR}/.local/bin/newsboat \
 	${DESTDIR}/.zshrc
 
 # Our package install script
@@ -48,12 +46,10 @@ PACKAGE_SCRIPT = install-packages.sh
 
 # Source files for our symlinks
 ${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
-${DESTDIR}/.config/kitty/kitty.conf: ${srcdir}/kitty/kitty.conf
+${DESTDIR}/.config/kitty: ${srcdir}/kitty
 ${DESTDIR}/.config/mpv: ${srcdir}/mpv
 ${DESTDIR}/.config/newsboat: ${srcdir}/newsboat
 ${DESTDIR}/.local/share/zsh: ${srcdir}/.local/share/zsh
-${DESTDIR}/.local/share/scripts: ${srcdir}/.local/share/scripts
-${DESTDIR}/.local/bin/newsboat: ${srcdir}/.local/bin/newsboat
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
 
 
