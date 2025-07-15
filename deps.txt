@@ -1,0 +1,6 @@
+zoxide
+nvim
+mpv
+newsboat
+kitty
+git
