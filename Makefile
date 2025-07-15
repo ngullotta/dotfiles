@@ -36,7 +36,7 @@ TARGETS= \
 	${DESTDIR}/.config/kitty \
 	${DESTDIR}/.config/mpv \
 	${DESTDIR}/.config/newsboat \
-	${DESTDIR}/.local/share/zsh \
+	${DESTDIR}/.local/share/zinit \
 	${DESTDIR}/.zshrc
 
 # Our package install script
@@ -49,7 +49,7 @@ ${DESTDIR}/.gitconfig: ${srcdir}/git/.gitconfig
 ${DESTDIR}/.config/kitty: ${srcdir}/kitty
 ${DESTDIR}/.config/mpv: ${srcdir}/mpv
 ${DESTDIR}/.config/newsboat: ${srcdir}/newsboat
-${DESTDIR}/.local/share/zsh: ${srcdir}/.local/share/zsh
+${DESTDIR}/.local/share/zinit: ${srcdir}/.local/share/zinit
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
 
 
