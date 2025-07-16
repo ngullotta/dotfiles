@@ -1,3 +1,4 @@
 [submodule ".local/share/zinit"]
 	path = .local/share/zinit
 	url = https://github.com/zdharma-continuum/zinit
+	ignore = dirty
