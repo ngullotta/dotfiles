@@ -52,3 +52,34 @@ ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion history)
 
 command -v zoxide > /dev/null 2>&1 && eval "$(zoxide init zsh)"
 command -v kitty > /dev/null 2>&1 && source <(kitty + complete setup zsh)
+
+# Copy for all major OS I use
+function _copy() {
+    local text="$1" # Use a local variable for clarity and safety
+    if command -v xclip &>/dev/null; then
+        # Explicitly close stdin for xclip after sending the text
+        print -rn -- "$text" | xclip -selection primary -i </dev/null && \
+        print -rn -- "$text" | xclip -selection clipboard -i </dev/null
+    elif command -v pbcopy &>/dev/null; then
+        print -rn -- "$text" | pbcopy
+    fi
+}
+
+# Copy the selected region to the clipboard.
+function shift-select::copy-region() {
+  local start=${MARK} end=${CURSOR}
+  if (( $start > $end )); then
+    local tmp=$start
+    start=$end
+    end=$tmp
+  fi
+
+  # Extract the selected text
+  local selected_text="${BUFFER[${start},${end}]}"
+
+  # Copy the selected text to the clipboard using pbcopy
+  _copy "${selected_text}"
+}
+zle -N shift-select::copy-region
+
+bindkey -M shift-select 'e' shift-select::copy-region
