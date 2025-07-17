@@ -30,8 +30,13 @@ https://feeds.npr.org/1001/rss.xml news
 https://www.phoronix.com/rss.php news science linux
 https://kotaku.com/rss news gaming
 https://hnrss.org/frontpage news tech
-https://rssfeeds.dnj.com/murfreesboro/home&x=1 "~DNJ" news local
-http://rssfeeds.tennessean.com/nashville/home&x=1 "~Tennessean" news regional
+https://tennesseestar.com/news/feed/ "~Tennessee Star" news regional
+https://tntribune.com/feed/ "~Tennessee Tribune" news regional
+https://www.wkrn.com/news/tennessee-news/feed/ "~WKRN" news regional
+https://wpln.org/feed/ "~WPLN" news regional
+https://www.murfreesborovoice.com/feeds "~Murfreesboro Voice" news local
+https://www.murfreesborotn.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml "~Murfreesboro Government" local
+
 
 " "
 "=== Finance ==="
@@ -44,3 +49,9 @@ https://seekingalpha.com/tag/long-ideas.xml news finance
 https://www.atlasobscura.com/feeds/latest misc
 https://what-if.xkcd.com/feed.atom misc
 http://nutritionstripped.com/feed/ misc nutrition
+
+
+" "
+"=== Testing ==="
+https://www.weather.gov/rss_page.php?site_name=ohx "~K4OHX"
+https://forecast.weather.gov/xml/current_obs/KMBT.rss "~Murfreesboro Weather (KMBT)"

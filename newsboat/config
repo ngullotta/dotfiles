@@ -1,9 +1,8 @@
-auto-reload yes
-external-url-viewer "urlscan -dc -r 'linkhandler {}'"
-max-items 0
-#feed-sort-order firsttag
+auto-reload     yes
+show-read-feeds yes
+browser         firefox
+max-items       100
 
-macro , open-in-browser
 macro m set browser "setsid -f mpv -quiet %u >/dev/null 2>&1"; open-in-browser ; set browser linkhandler
 macro i set pager "/home/muto/.local/bin/kitty-img-pager.sh"; open; set pager internal
 
