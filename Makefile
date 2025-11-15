@@ -37,7 +37,8 @@ TARGETS= \
 	${DESTDIR}/.config/mpv \
 	${DESTDIR}/.config/newsboat \
 	${DESTDIR}/.local/share/zinit \
-	${DESTDIR}/.zshrc
+	${DESTDIR}/.zshrc \
+	${DESTDIR}/.aliasrc
 
 # Our package install script
 PACKAGE_SCRIPT = install-packages.sh
@@ -51,6 +52,7 @@ ${DESTDIR}/.config/mpv: ${srcdir}/mpv
 ${DESTDIR}/.config/newsboat: ${srcdir}/newsboat
 ${DESTDIR}/.local/share/zinit: ${srcdir}/.local/share/zinit
 ${DESTDIR}/.zshrc: ${srcdir}/zsh/.zshrc
+${DESTDIR}/.aliasrc: ${srcdir}/zsh/.aliasrc
 
 
 $(TARGETS):

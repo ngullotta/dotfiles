@@ -83,3 +83,6 @@ function shift-select::copy-region() {
 zle -N shift-select::copy-region
 
 bindkey -M shift-select 'e' shift-select::copy-region
+
+# Bind aliases
+[[ -r "$HOME/.aliasrc" ]] && source "$HOME/.aliasrc"
