@@ -69,7 +69,7 @@ packages:
 	@chmod +x $(PACKAGE_SCRIPT)
 	@./$(PACKAGE_SCRIPT)
 
-install: init targets
+install: init packages targets
 
 uninstall:
 	rm $(TARGETS) > /dev/null 2>&1 || true
