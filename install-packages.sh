@@ -11,7 +11,7 @@ detect_pm() {
     elif command -v brew >/dev/null 2>&1; then
         echo "brew"
     else
-        echo "unknown"p
+        echo "unknown"
     fi
 }
 
@@ -20,7 +20,7 @@ install_packages() {
     pm="$1"
     shift
     packages="$*"
-    
+
     case "$pm" in
         pacman)
             # shellcheck disable=SC2086
@@ -49,11 +49,11 @@ install_packages() {
 get_package_name() {
     generic_name="$1"
     pm="$2"
-    
+
     # https://repology.org/projects/ (<-- helper)
     # Package mappings - format: generic:pacman:dnf:apt:brew
     case "$generic_name" in
-        editor) mapping="editor:vim:vim:vim:vim" ;;
+        editor) mapping="editor:nvim:vim:vim:vim" ;;
         terminal) mapping="terminal:alacritty:alacritty:alacritty:alacritty" ;;
         shell) mapping="shell:zsh:zsh:zsh:zsh" ;;
         git) mapping="git:git:git:git:git" ;;
@@ -66,16 +66,17 @@ get_package_name() {
         nodejs) mapping="nodejs:nodejs:nodejs:nodejs:node" ;;
         python) mapping="python:python:python3:python3:python3" ;;
         docker) mapping="docker:docker:docker:docker.io:docker" ;;
-        neofetch) mapping="neofetch:neofetch:neofetch:neofetch:neofetch" ;;
+        fastfetch) mapping="fastfetch:fastfetch:fastfetch:fastfetch:fastfetch" ;;
         htop) mapping="htop:htop:htop:htop:htop" ;;
         tree) mapping="tree:tree:tree:tree:tree" ;;
         wget) mapping="wget:wget:wget:wget:wget" ;;
         unzip) mapping="unzip:unzip:unzip:unzip:unzip" ;;
         fzf) mapping="fzf:fzf:fzf:fzf:fzf" ;;
         jq) mapping="jq:jq:jq:jq:jq" ;;
+        zoxide) mapping="zoxide:zoxide:zoxide:zoxide:zoxide" ;;
         *) echo "$generic_name"; return ;;
     esac
-    
+
     # Parse the mapping based on package manager
     case "$pm" in
         pacman) echo "$mapping" | cut -d':' -f2 ;;
@@ -89,26 +90,27 @@ get_package_name() {
 # Main installation function
 main() {
     pm=$(detect_pm)
-    
+
     if [ "$pm" = "unknown" ]; then
         echo "Error: No supported package manager found"
         exit 1
     fi
-    
+
     echo "Detected package manager: $pm"
-    
+
     # Define your common packages here (space-separated)
-    common_packages="editor terminal shell git curl tmux ripgrep fd bat exa nodejs python neofetch htop tree wget unzip fzf jq"
-    
+    common_packages="editor terminal shell git curl tmux ripgrep fd bat exa nodejs python fastfetch htop tree wget unzip fzf jq zoxide"
+
     # Convert generic names to package manager specific names
     actual_packages=""
     for pkg in $common_packages; do
         actual_name=$(get_package_name "$pkg" "$pm")
         actual_packages="$actual_packages $actual_name"
     done
-    
-    echo "Installing packages:$actual_packages"
-    install_packages "$pm" $actual_packages
+
+    echo "Installing packages:"
+    echo "$actual_packages" | tr " " "\n"
+    install_packages "$pm" "$actual_packages"
 }
 
 # Run if executed directly
