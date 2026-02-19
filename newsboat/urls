@@ -1,57 +1,41 @@
 "=== Comics ==="
-https://xkcd.com/rss.xml comics
+https://xkcd.com/rss.xml "~XKCD" comics
 
 " "
 "=== Science ==="
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBa659QWEk1AI4Tg--mrJ2A science youtube # Tom Scott
-https://www.youtube.com/feeds/videos.xml?channel_id=UCHnyfMqiRRG1u-2MsSQLbXA science youtube # Veritasium
-http://antwrp.gsfc.nasa.gov/apod.rss science
+http://antwrp.gsfc.nasa.gov/apod.rss "~APOD" science
 
 " "
 "=== Youtube ==="
 https://www.youtube.com/feeds/videos.xml?channel_id=UC1DTYW241WD64ah5BFWn4JA youtube # Sam O'Nella Academy
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2Egt30phfTNZO5Yxb-sbyw youtube # ManyKudos
-https://www.youtube.com/feeds/videos.xml?channel_id=UCR1D15p_vdP3HkrH8wgjQRw youtube # Internet Historian
-https://www.youtube.com/feeds/videos.xml?channel_id=UC8Q7XEy86Q7T-3kNpNjYgwA youtube # Internet Historian (Incognito)
-https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw youtube # LTT
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYsGgfAcQ91Fpda3_O-h0LA youtube # Clint Stevens
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2rzsm1Qi6N1X-wuOg_p0Ng youtube # Project Farm
 https://www.youtube.com/feeds/videos.xml?channel_id=UChrYe70o7NmDioL02PRVWVg youtube # MattKC
-https://www.youtube.com/feeds/videos.xml?channel_id=UCs-w7E2HZWwXmjt9RTvBB_A youtube # Settled
+
+" "
+"=== Sports ==="
+https://old.reddit.com/r/CFB.rss "~r/CFB" r/CFB
 
 " "
 "=== Twitch ==="
-https://twitchrss.appspot.com/vodonly/kitboga twitch
-https://twitchrss.appspot.com/vodonly/clintstevens twitch
+https://twitchrss.appspot.com/vodonly/kitboga "~Kitboga VODs" twitch
+https://twitchrss.appspot.com/vodonly/clintstevens "~Clintstevens VODs" twitch
 
 " "
-"=== News ==="
-https://feeds.npr.org/1001/rss.xml news
-https://www.phoronix.com/rss.php news science linux
-https://kotaku.com/rss news gaming
-https://hnrss.org/frontpage news tech
-https://tennesseestar.com/news/feed/ "~Tennessee Star" news regional
-https://tntribune.com/feed/ "~Tennessee Tribune" news regional
+"=== Local News ==="
 https://www.wkrn.com/news/tennessee-news/feed/ "~WKRN" news regional
 https://wpln.org/feed/ "~WPLN" news regional
+https://tntribune.com/feed/ "~Tennessee Tribune" news regional
 https://www.murfreesborovoice.com/feeds "~Murfreesboro Voice" news local
 https://www.murfreesborotn.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml "~Murfreesboro Government" local
 
+" "
+"=== Other News ==="
+https://techcrunch.com/feed/ "~TechCrunch" news tech
+https://feeds.npr.org/1001/rss.xml "~NPR" news world
+https://kotaku.com/rss "~Kotaku" news gaming
+https://hnrss.org/frontpage "~Hacker News" news tech
 
 " "
 "=== Finance ==="
-https://www.youtube.com/feeds/videos.xml?channel_id=UCLe_q9axMaeTbjN0hy1Z9xA finance youtube # Caleb Hammer
 https://seekingalpha.com/tag/long-ideas.xml news finance
-
-
-" "
-"=== Curiosities ==="
-https://www.atlasobscura.com/feeds/latest misc
-https://what-if.xkcd.com/feed.atom misc
-http://nutritionstripped.com/feed/ misc nutrition
-
-
-" "
-"=== Testing ==="
-https://www.weather.gov/rss_page.php?site_name=ohx "~K4OHX"
-https://forecast.weather.gov/xml/current_obs/KMBT.rss "~Murfreesboro Weather (KMBT)"
