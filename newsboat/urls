@@ -37,5 +37,8 @@ https://kotaku.com/rss "~Kotaku" news gaming
 https://hnrss.org/frontpage "~Hacker News" news tech
 
 " "
-"=== Finance ==="
-https://seekingalpha.com/tag/long-ideas.xml news finance
+"=== Quant/Finance ==="
+https://seekingalpha.com/feed.xml finance quant
+https://seekingalpha.com/tag/editors-picks.xml finance quant
+https://seekingalpha.com/tag/long-ideas.xml finance quant
+https://seekingalpha.com/tag/ipo-analysis.xml finance quant
